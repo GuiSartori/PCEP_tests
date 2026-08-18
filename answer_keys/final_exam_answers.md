@@ -32,7 +32,7 @@
 | 24 | A | 4 | Function returning None implicitly |
 | 25 | B | 4 | global keyword |
 | 26 | C | 4 | Recursive factorial |
-| 27 | A | 4 | Multiple except (ValueError, TypeError) |
+| 27 | A | 4 | Multiple except clauses (ValueError, TypeError) |
 | 28 | D | 4 | try/finally without except |
 | 29 | B | 4 | lambda with filter() |
 | 30 | C | 4 | Scope shadowing (LEGB) |
@@ -92,7 +92,7 @@ print("D")
 ```
 **Answer: A** — `A-B-C!D`
 
-`sep="-"` joins arguments with dashes. `end="!"` replaces the newline, so "D" continues on the same line.
+sep="-" joins with dashes, end="!" replaces the newline. Next print starts right after "!", outputting "D" on the same line.
 
 ---
 
@@ -300,7 +300,7 @@ del data[2:5]  # removes indices 2,3,4 → values 2,3,4
 
 ### Q27 — Multiple except
 ```python
-# int("hello") → ValueError. Caught by first except clause.
+# int("hello") → ValueError. Caught by first except clause (ValueError).
 ```
 **Answer: A** — `caught`
 
