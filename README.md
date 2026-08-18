@@ -8,7 +8,7 @@ Practice exams and study material for the **Python Certified Entry-Level Python 
 - **1 final exam** (30 questions) — mirrors the real PCEP-30-02 format exactly
 - **1 concept checklist** (76 questions) — identifies your knowledge gaps by topic
 - **Detailed answer keys** with explanations for every question
-- **Study guides** covering all exam domains + bitwise deep-dive
+- **Study guide** covering all exam domains
 - **Shared exam engine** — DRY architecture, easy to extend
 
 ## Quick Start
@@ -58,9 +58,7 @@ pcep-study-kit/
 │   └── final_exam_answers.md
 │
 ├── content/                      # Study material
-│   ├── pcep_study_guide.md       # Full content overview by domain
-│   ├── bitwise_operators.md      # Bitwise deep-dive with exercises
-│   └── pcep_overview.md          # Exam info & structure
+│   └── pcep_study_guide.md       # Full content overview by domain
 │
 ├── .kiro/steering/               # AI steering rules (for generating new exams)
 │   └── pcep-mock-exams.md
@@ -74,7 +72,7 @@ pcep-study-kit/
 ```
 1. Read content/pcep_study_guide.md (overview of all topics)
 2. Run exams/checklist.py (identify weak spots)
-3. Study weak areas (e.g., content/bitwise_operators.md)
+3. Study weak areas using the study guide
 4. Progress through exams in order:
    mock_exam_1 → mock_exam_2 → mock_exam_3 → mock_exam_4 → mock_exam_5
 5. Take the final_exam.py as your dress rehearsal

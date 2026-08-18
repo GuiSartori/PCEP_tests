@@ -11,7 +11,7 @@ from exam_engine import run_exam
 
 questoes = [
     {
-        "pergunta": """Qual é o resultado do seguinte código?
+        "pergunta": """What is the output of the following code?
 
     x = 1
     y = 2
@@ -19,62 +19,62 @@ questoes = [
     print(x, y)""",
         "opcoes": ['2 1', '1 2', '1 1', '2 2'],
         "resposta": "A",
-        "explicacao": 'Swap com tuple unpacking: x recebe y (2), y recebe x (1).'
+        "explicacao": 'Swap with tuple unpacking: x receives y (2), y receives x (1).'
     },
     {
-        "pergunta": """O que o operador // faz em Python?""",
-        "opcoes": ['Divisão com resultado float', 'Divisão inteira (floor division)', 'Exponenciação', 'Resto da divisão'],
+        "pergunta": """What does the // operator do in Python?""",
+        "opcoes": ['Division with float result', 'Integer division (floor division)', 'Exponentiation', 'Modulo (remainder)'],
         "resposta": "B",
-        "explicacao": '// faz divisão inteira, arredondando para baixo.'
+        "explicacao": '// performs integer division, rounding down.'
     },
     {
-        "pergunta": """Qual é o resultado?
+        "pergunta": """What is the output?
 
     print(2 ** 3 ** 2)""",
         "opcoes": ['64', '36', '512', '81'],
         "resposta": "C",
-        "explicacao": '** é associativo à direita: 2 ** (3**2) = 2**9 = 512.'
+        "explicacao": '** is right-associative: 2 ** (3**2) = 2**9 = 512.'
     },
     {
-        "pergunta": """Qual é o tipo retornado por type(3.0)?""",
+        "pergunta": """What is the type returned by type(3.0)?""",
         "opcoes": ["<class 'int'>", "<class 'str'>", "<class 'double'>", "<class 'float'>"],
         "resposta": "D",
-        "explicacao": '3.0 tem ponto decimal, portanto é float.'
+        "explicacao": '3.0 has a decimal point, so it is a float.'
     },
     {
-        "pergunta": """Qual é o resultado?
+        "pergunta": """What is the output?
 
     x = "Python"
     print(x[1:4])""",
         "opcoes": ['Pyt', 'yth', 'ytho', 'Pyth'],
         "resposta": "B",
-        "explicacao": "Slice [1:4] pega índices 1, 2, 3 → 'y', 't', 'h'."
+        "explicacao": "Slice [1:4] takes indices 1, 2, 3 → 'y', 't', 'h'."
     },
     {
-        "pergunta": """Qual alternativa NÃO é um nome de variável válido?""",
+        "pergunta": """Which option is NOT a valid variable name?""",
         "opcoes": ['_valor', 'valor2', '2valor', 'valor_total'],
         "resposta": "C",
-        "explicacao": 'Variáveis não podem começar com número.'
+        "explicacao": 'Variables cannot start with a number.'
     },
     {
-        "pergunta": """Qual é o resultado?
+        "pergunta": """What is the output?
 
     lista = [1, 2, 3, 4, 5]
     print(lista[-2])""",
         "opcoes": ['5', '3', '2', '4'],
         "resposta": "D",
-        "explicacao": 'Índice -2 é o penúltimo elemento → 4.'
+        "explicacao": 'Index -2 is the second-to-last element → 4.'
     },
     {
-        "pergunta": """Qual é o resultado?
+        "pergunta": """What is the output?
 
     print(bool(0), bool(""), bool([]))""",
         "opcoes": ['False False False', 'True True True', 'False True False', 'True False True'],
         "resposta": "A",
-        "explicacao": '0, string vazia e lista vazia são todos falsy → False.'
+        "explicacao": '0, empty string, and empty list are all falsy → False.'
     },
     {
-        "pergunta": """O que é impresso?
+        "pergunta": """What is printed?
 
     i = 0
     while i < 5:
@@ -84,85 +84,85 @@ questoes = [
         print(i, end=" ")""",
         "opcoes": ['1 2 3 4 5', '1 2 4', '0 1 2 4 5', '1 2 4 5'],
         "resposta": "D",
-        "explicacao": 'continue pula o print quando i==3. Imprime 1 2 4 5.'
+        "explicacao": 'continue skips the print when i==3. Prints 1 2 4 5.'
     },
     {
-        "pergunta": """Qual é o resultado?
+        "pergunta": """What is the output?
 
     def func(a, b=2):
         return a * b
 
     print(func(3))""",
-        "opcoes": ['6', 'Erro: argumento faltando', '32', '5'],
+        "opcoes": ['6', 'Error: missing argument', '32', '5'],
         "resposta": "A",
-        "explicacao": 'b tem valor padrão 2, então func(3) = 3 * 2 = 6.'
+        "explicacao": 'b has default value 2, so func(3) = 3 * 2 = 6.'
     },
     {
-        "pergunta": """Qual é o resultado?
+        "pergunta": """What is the output?
 
     nums = [1, 2, 3]
     nums.append([4, 5])
     print(len(nums))""",
-        "opcoes": ['5', '3', '4', 'Erro'],
+        "opcoes": ['5', '3', '4', 'Error'],
         "resposta": "C",
-        "explicacao": 'append adiciona [4,5] como UM elemento. len = 4.'
+        "explicacao": 'append adds [4,5] as ONE element. len = 4.'
     },
     {
-        "pergunta": """Qual é o resultado?
+        "pergunta": """What is the output?
 
     x = 10
     y = 3
     print(x % y)""",
         "opcoes": ['3', '3.33', '0', '1'],
         "resposta": "D",
-        "explicacao": '10 % 3 = 1 (resto da divisão).'
+        "explicacao": '10 % 3 = 1 (remainder of the division).'
     },
     {
-        "pergunta": """Qual método remove E retorna o último elemento de uma lista?""",
+        "pergunta": """Which method removes AND returns the last element of a list?""",
         "opcoes": ['list.remove()', 'list.pop()', 'list.del()', 'list.discard()'],
         "resposta": "B",
-        "explicacao": 'pop() remove e retorna o último (ou o índice especificado).'
+        "explicacao": 'pop() removes and returns the last element (or the specified index).'
     },
     {
-        "pergunta": """Qual é o resultado?
+        "pergunta": """What is the output?
 
     text = "hello"
     print(text.upper().count("L"))""",
-        "opcoes": ['0', '1', '2', 'Erro'],
+        "opcoes": ['0', '1', '2', 'Error'],
         "resposta": "C",
-        "explicacao": "'HELLO'.count('L') → encontra 2 ocorrências de 'L'."
+        "explicacao": "'HELLO'.count('L') → finds 2 occurrences of 'L'."
     },
     {
-        "pergunta": """Qual é o resultado?
+        "pergunta": """What is the output?
 
     a = [1, 2, 3]
     b = a
     b.append(4)
     print(a)""",
-        "opcoes": ['[1, 2, 3]', '[4, 1, 2, 3]', '[1, 2, 3, 4]', 'Erro'],
+        "opcoes": ['[1, 2, 3]', '[4, 1, 2, 3]', '[1, 2, 3, 4]', 'Error'],
         "resposta": "C",
-        "explicacao": 'b = a cria referência (não cópia). Ambos apontam para a mesma lista.'
+        "explicacao": 'b = a creates a reference (not a copy). Both point to the same list.'
     },
     {
-        "pergunta": """Qual é o resultado?
+        "pergunta": """What is the output?
 
     for i in range(2, 10, 3):
         print(i, end=" ")""",
         "opcoes": ['2 4 6 8', '3 6 9', '2 5 8 11', '2 5 8'],
         "resposta": "D",
-        "explicacao": 'range(2, 10, 3) → começa em 2, passo 3, para antes de 10: 2, 5, 8.'
+        "explicacao": 'range(2, 10, 3) → starts at 2, step 3, stops before 10: 2, 5, 8.'
     },
     {
-        "pergunta": """O que é impresso?
+        "pergunta": """What is printed?
 
     dicionario = {"a": 1, "b": 2, "c": 3}
     print("b" in dicionario)""",
-        "opcoes": ['True', 'False', '2', 'Erro'],
+        "opcoes": ['True', 'False', '2', 'Error'],
         "resposta": "A",
-        "explicacao": "'in' verifica as CHAVES do dicionário. 'b' é uma chave."
+        "explicacao": "'in' checks the KEYS of the dictionary. 'b' is a key."
     },
     {
-        "pergunta": """Qual é o resultado?
+        "pergunta": """What is the output?
 
     def func(lst):
         lst = [10, 20, 30]
@@ -170,33 +170,33 @@ questoes = [
     minha_lista = [1, 2, 3]
     func(minha_lista)
     print(minha_lista)""",
-        "opcoes": ['[10, 20, 30]', '[1, 2, 3]', '[]', 'Erro'],
+        "opcoes": ['[10, 20, 30]', '[1, 2, 3]', '[]', 'Error'],
         "resposta": "B",
-        "explicacao": 'Reatribuir lst dentro da função cria variável local. Não afeta a original.'
+        "explicacao": 'Reassigning lst inside the function creates a local variable. It does not affect the original.'
     },
     {
-        "pergunta": """Qual é o resultado?
+        "pergunta": """What is the output?
 
     try:
         print(1 / 0)
     except ZeroDivisionError:
-        print("erro")
+        print("error")
     else:
         print("ok")
     finally:
-        print("fim")""",
-        "opcoes": ['erro fim', 'ok fim', 'erro ok fim', 'Apenas erro'],
+        print("end")""",
+        "opcoes": ['error end', 'ok end', 'error ok end', 'Only error'],
         "resposta": "A",
-        "explicacao": 'Exceção capturada → else NÃO executa. finally SEMPRE executa.'
+        "explicacao": 'Exception caught → else does NOT execute. finally ALWAYS executes.'
     },
     {
-        "pergunta": """Qual é o resultado?
+        "pergunta": """What is the output?
 
     x = "abc"
     y = x * 2
     z = x + "2"
     print(y, z)""",
-        "opcoes": ['abc2 abcabc', 'abcabc abc2', 'Erro', '6 abc2'],
+        "opcoes": ['abc2 abcabc', 'abcabc abc2', 'Error', '6 abc2'],
         "resposta": "B",
         "explicacao": "'abc' * 2 = 'abcabc'. 'abc' + '2' = 'abc2'."
     },
