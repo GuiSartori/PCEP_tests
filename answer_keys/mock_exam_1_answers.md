@@ -1,12 +1,12 @@
-# 📝 CORREÇÃO DETALHADA - SIMULADO PCEP 1
+# 📝 DETAILED ANSWER KEY - PCEP MOCK EXAM 1
 
-## ✅ Gabarito e Explicações
+## ✅ Answer Key & Explanations
 
 ---
 
-### **Questão 1**
+### **Question 1**
 
-**Pergunta:**
+**Code:**
 ```python
 x = 1
 y = 2
@@ -14,222 +14,222 @@ x, y = y, x
 print(x, y)
 ```
 
-**Opções:**
+**Options:**
 - A. `2 1`
 - B. `1 2`
 - C. `1 1`
 - D. `2 2`
 
-**✅ Resposta Correta: A**
+**✅ Correct Answer: A**
 
-**📚 Explicação:**
-Esta é uma técnica chamada **tuple unpacking** (desempacotamento de tupla) ou **swap simultâneo**. 
+**📚 Explanation:**
+This technique is called **tuple unpacking** or **simultaneous swap**.
 
-Em Python, a expressão `x, y = y, x` funciona assim:
-1. O lado direito `y, x` cria uma tupla temporária `(2, 1)`
-2. O lado esquerdo `x, y` desempacota essa tupla
-3. `x` recebe o primeiro valor (2) e `y` recebe o segundo valor (1)
+In Python, the expression `x, y = y, x` works like this:
+1. The right-hand side `y, x` creates a temporary tuple `(2, 1)`
+2. The left-hand side `x, y` unpacks that tuple
+3. `x` gets the first value (2) and `y` gets the second value (1)
 
-**Conceito:** Atribuição múltipla e tuple unpacking para troca de valores sem variável temporária.
+**Concept:** Multiple assignment and tuple unpacking for swapping values without a temporary variable.
 
 ---
 
-### **Questão 2**
+### **Question 2**
 
-**Pergunta:**
-O que o operador `//` faz em Python?
+**Question:**
+What does the `//` operator do in Python?
 
-**Opções:**
-- A. Divisão com resultado float
-- B. Divisão inteira (floor division)
-- C. Exponenciação
-- D. Resto da divisão
+**Options:**
+- A. Division with float result
+- B. Floor division (integer division)
+- C. Exponentiation
+- D. Remainder of division
 
-**✅ Resposta Correta: B**
+**✅ Correct Answer: B**
 
-**📚 Explicação:**
-O operador `//` realiza **divisão inteira** (floor division), que retorna apenas a parte inteira do resultado da divisão, arredondando para baixo.
+**📚 Explanation:**
+The `//` operator performs **floor division**, which returns only the integer part of the division result, rounding down.
 
-Exemplos:
-- `7 // 2` → `3` (não 3.5)
-- `10 // 3` → `3` (não 3.333...)
+Examples:
+- `7 // 2` → `3` (not 3.5)
+- `10 // 3` → `3` (not 3.333...)
 - `9 // 2` → `4`
 
-**Conceito:** Operadores aritméticos - divisão inteira vs divisão normal (`/`).
+**Concept:** Arithmetic operators — floor division vs normal division (`/`).
 
 ---
 
-### **Questão 3**
+### **Question 3**
 
-**Pergunta:**
+**Code:**
 ```python
 print(2 ** 3 ** 2)
 ```
 
-**Opções:**
+**Options:**
 - A. `64`
 - B. `36`
 - C. `512`
 - D. `81`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-O operador de exponenciação `**` é **associativo à direita**, ou seja, é avaliado da direita para a esquerda.
+**📚 Explanation:**
+The exponentiation operator `**` is **right-associative**, meaning it evaluates from right to left.
 
-Portanto:
-- `2 ** 3 ** 2` é interpretado como `2 ** (3 ** 2)`
-- Primeiro calcula `3 ** 2 = 9`
-- Depois calcula `2 ** 9 = 512`
+Therefore:
+- `2 ** 3 ** 2` is interpreted as `2 ** (3 ** 2)`
+- First computes `3 ** 2 = 9`
+- Then computes `2 ** 9 = 512`
 
-**Conceito:** Precedência e associatividade de operadores - exponenciação é associativa à direita.
+**Concept:** Operator precedence and associativity — exponentiation is right-associative.
 
 ---
 
-### **Questão 4**
+### **Question 4**
 
-**Pergunta:**
-Qual é o tipo retornado por `type(3.0)`?
+**Question:**
+What is the type returned by `type(3.0)`?
 
-**Opções:**
+**Options:**
 - A. `<class 'int'>`
 - B. `<class 'str'>`
 - C. `<class 'double'>`
 - D. `<class 'float'>`
 
-**✅ Resposta Correta: D**
+**✅ Correct Answer: D**
 
-**📚 Explicação:**
-Em Python, qualquer número com **ponto decimal** é tratado como `float`, mesmo que seja `.0`.
+**📚 Explanation:**
+In Python, any number with a **decimal point** is treated as `float`, even if it's `.0`.
 
 - `3` → `<class 'int'>`
 - `3.0` → `<class 'float'>`
 - `3.` → `<class 'float'>`
 
-Python não tem tipo `double` (como em C/Java). O tipo `float` usa precisão dupla internamente.
+Python does not have a `double` type (unlike C/Java). The `float` type uses double precision internally.
 
-**Conceito:** Tipos numéricos em Python - int vs float.
+**Concept:** Numeric types in Python — int vs float.
 
 ---
 
-### **Questão 5**
+### **Question 5**
 
-**Pergunta:**
+**Code:**
 ```python
 x = "Python"
 print(x[1:4])
 ```
 
-**Opções:**
+**Options:**
 - A. `Pyt`
 - B. `yth`
 - C. `ytho`
 - D. `Pyth`
 
-**✅ Resposta Correta: B**
+**✅ Correct Answer: B**
 
-**📚 Explicação:**
-O **slicing** de strings usa a notação `[início:fim]`, onde:
-- O índice de início é **inclusivo**
-- O índice de fim é **exclusivo**
+**📚 Explanation:**
+String **slicing** uses the notation `[start:end]`, where:
+- The start index is **inclusive**
+- The end index is **exclusive**
 
-Para a string `"Python"`:
-- Índice 0: `P`
-- Índice 1: `y`
-- Índice 2: `t`
-- Índice 3: `h`
-- Índice 4: `o`
-- Índice 5: `n`
+For the string `"Python"`:
+- Index 0: `P`
+- Index 1: `y`
+- Index 2: `t`
+- Index 3: `h`
+- Index 4: `o`
+- Index 5: `n`
 
-`x[1:4]` pega os índices 1, 2 e 3 → `"yth"`
+`x[1:4]` takes indices 1, 2, and 3 → `"yth"`
 
-**Conceito:** Slicing (fatiamento) de strings - índices inclusivo/exclusivo.
+**Concept:** String slicing — inclusive start / exclusive end.
 
 ---
 
-### **Questão 6**
+### **Question 6**
 
-**Pergunta:**
-Qual alternativa NÃO é um nome de variável válido?
+**Question:**
+Which option is NOT a valid variable name?
 
-**Opções:**
+**Options:**
 - A. `_valor`
 - B. `valor2`
 - C. `2valor`
 - D. `valor_total`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-Regras para nomes de variáveis em Python:
-- ✅ Devem começar com **letra** ou **underscore** (`_`)
-- ✅ Podem conter letras, números e underscores
-- ❌ **Não podem começar com número**
-- ❌ Não podem conter espaços ou caracteres especiais
+**📚 Explanation:**
+Rules for variable names in Python:
+- ✅ Must start with a **letter** or **underscore** (`_`)
+- ✅ Can contain letters, numbers, and underscores
+- ❌ **Cannot start with a number**
+- ❌ Cannot contain spaces or special characters
 
-`2valor` é inválido porque começa com número.
+`2valor` is invalid because it starts with a number.
 
-**Conceito:** Convenções de nomenclatura e identificadores válidos em Python.
+**Concept:** Naming conventions and valid identifiers in Python.
 
 ---
 
-### **Questão 7**
+### **Question 7**
 
-**Pergunta:**
+**Code:**
 ```python
 lista = [1, 2, 3, 4, 5]
 print(lista[-2])
 ```
 
-**Opções:**
+**Options:**
 - A. `5`
 - B. `3`
 - C. `2`
 - D. `4`
 
-**✅ Resposta Correta: D**
+**✅ Correct Answer: D**
 
-**📚 Explicação:**
-Índices **negativos** contam de trás para frente:
-- `lista[-1]` → último elemento (`5`)
-- `lista[-2]` → penúltimo elemento (`4`)
-- `lista[-3]` → antepenúltimo elemento (`3`)
+**📚 Explanation:**
+**Negative** indices count from the end:
+- `lista[-1]` → last element (`5`)
+- `lista[-2]` → second-to-last element (`4`)
+- `lista[-3]` → third-to-last element (`3`)
 
-**Conceito:** Indexação negativa em sequências (listas, tuplas, strings).
+**Concept:** Negative indexing in sequences (lists, tuples, strings).
 
 ---
 
-### **Questão 8**
+### **Question 8**
 
-**Pergunta:**
+**Code:**
 ```python
 print(bool(0), bool(""), bool([]))
 ```
 
-**Opções:**
+**Options:**
 - A. `False False False`
 - B. `True True True`
 - C. `False True False`
 - D. `True False True`
 
-**✅ Resposta Correta: A**
+**✅ Correct Answer: A**
 
-**📚 Explicação:**
-Em Python, certos valores são considerados **falsy** (equivalentes a `False`):
-- Números zero: `0`, `0.0`, `0j`
-- Sequências vazias: `""`, `[]`, `()`, `{}`
+**📚 Explanation:**
+In Python, certain values are considered **falsy** (equivalent to `False`):
+- Zero numbers: `0`, `0.0`, `0j`
+- Empty sequences: `""`, `[]`, `()`, `{}`
 - `None`
 - `False`
 
-Todos os outros valores são **truthy** (equivalentes a `True`).
+All other values are **truthy** (equivalent to `True`).
 
-**Conceito:** Valores booleanos e truthiness/falsiness em Python.
+**Concept:** Boolean values and truthiness/falsiness in Python.
 
 ---
 
-### **Questão 9**
+### **Question 9**
 
-**Pergunta:**
+**Code:**
 ```python
 i = 0
 while i < 5:
@@ -239,32 +239,32 @@ while i < 5:
     print(i, end=" ")
 ```
 
-**Opções:**
+**Options:**
 - A. `1 2 3 4 5`
 - B. `1 2 4`
 - C. `0 1 2 4 5`
 - D. `1 2 4 5`
 
-**✅ Resposta Correta: D**
+**✅ Correct Answer: D**
 
-**📚 Explicação:**
-O comando `continue` **pula o restante da iteração** e volta ao início do loop.
+**📚 Explanation:**
+The `continue` statement **skips the rest of the current iteration** and goes back to the top of the loop.
 
-Execução passo a passo:
-1. `i=0` → `i=1`, `i!=3` → imprime `1`
-2. `i=1` → `i=2`, `i!=3` → imprime `2`
-3. `i=2` → `i=3`, `i==3` → `continue` (pula o print)
-4. `i=3` → `i=4`, `i!=3` → imprime `4`
-5. `i=4` → `i=5`, `i!=3` → imprime `5`
-6. `i=5`, não é `< 5`, loop termina
+Step-by-step execution:
+1. `i=0` → `i=1`, `i!=3` → prints `1`
+2. `i=1` → `i=2`, `i!=3` → prints `2`
+3. `i=2` → `i=3`, `i==3` → `continue` (skips print)
+4. `i=3` → `i=4`, `i!=3` → prints `4`
+5. `i=4` → `i=5`, `i!=3` → prints `5`
+6. `i=5`, not `< 5`, loop ends
 
-**Conceito:** Controle de fluxo - uso de `continue` em loops.
+**Concept:** Control flow — using `continue` in loops.
 
 ---
 
-### **Questão 10**
+### **Question 10**
 
-**Pergunta:**
+**Code:**
 ```python
 def func(a, b=2):
     return a * b
@@ -272,149 +272,149 @@ def func(a, b=2):
 print(func(3))
 ```
 
-**Opções:**
+**Options:**
 - A. `6`
-- B. `Erro: argumento faltando`
+- B. `Error: missing argument`
 - C. `32`
 - D. `5`
 
-**✅ Resposta Correta: A**
+**✅ Correct Answer: A**
 
-**📚 Explicação:**
-Funções podem ter **parâmetros com valores padrão**. Se o argumento não for fornecido, o valor padrão é usado.
+**📚 Explanation:**
+Functions can have **parameters with default values**. If the argument is not provided, the default value is used.
 
-- `b=2` define o valor padrão para `b`
-- `func(3)` fornece apenas `a=3`
-- `b` usa o valor padrão `2`
-- Resultado: `3 * 2 = 6`
+- `b=2` sets the default value for `b`
+- `func(3)` provides only `a=3`
+- `b` uses the default value `2`
+- Result: `3 * 2 = 6`
 
-**Conceito:** Parâmetros opcionais e valores padrão em funções.
+**Concept:** Optional parameters and default values in functions.
 
 ---
 
-### **Questão 11**
+### **Question 11**
 
-**Pergunta:**
+**Code:**
 ```python
 nums = [1, 2, 3]
 nums.append([4, 5])
 print(len(nums))
 ```
 
-**Opções:**
+**Options:**
 - A. `5`
 - B. `3`
 - C. `4`
-- D. `Erro`
+- D. `Error`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-O método `append()` adiciona o objeto inteiro como **um único elemento** ao final da lista.
+**📚 Explanation:**
+The `append()` method adds the entire object as **a single element** to the end of the list.
 
-- Lista original: `[1, 2, 3]` (3 elementos)
-- Após `append([4, 5])`: `[1, 2, 3, [4, 5]]` (4 elementos)
-- A lista `[4, 5]` é adicionada como UM elemento
+- Original list: `[1, 2, 3]` (3 elements)
+- After `append([4, 5])`: `[1, 2, 3, [4, 5]]` (4 elements)
+- The list `[4, 5]` is added as ONE element
 
-Se quisesse adicionar os elementos individualmente, deveria usar `extend([4, 5])`.
+To add elements individually, use `extend([4, 5])`.
 
-**Conceito:** Diferença entre `append()` (adiciona elemento) e `extend()` (adiciona elementos).
+**Concept:** Difference between `append()` (adds one element) and `extend()` (adds multiple elements).
 
 ---
 
-### **Questão 12**
+### **Question 12**
 
-**Pergunta:**
+**Code:**
 ```python
 x = 10
 y = 3
 print(x % y)
 ```
 
-**Opções:**
+**Options:**
 - A. `3`
 - B. `3.33`
 - C. `0`
 - D. `1`
 
-**✅ Resposta Correta: D**
+**✅ Correct Answer: D**
 
-**📚 Explicação:**
-O operador `%` (módulo) retorna o **resto da divisão inteira**.
+**📚 Explanation:**
+The `%` (modulo) operator returns the **remainder of integer division**.
 
-- `10 ÷ 3 = 3` com resto `1`
-- Portanto, `10 % 3 = 1`
+- `10 ÷ 3 = 3` with remainder `1`
+- Therefore, `10 % 3 = 1`
 
-Exemplos:
-- `10 % 2 = 0` (10 é divisível por 2)
+Examples:
+- `10 % 2 = 0` (10 is divisible by 2)
 - `7 % 3 = 1`
 - `15 % 4 = 3`
 
-**Conceito:** Operador módulo (%) - resto da divisão.
+**Concept:** Modulo operator (%) — remainder of division.
 
 ---
 
-### **Questão 13**
+### **Question 13**
 
-**Pergunta:**
-Qual método remove E retorna o último elemento de uma lista?
+**Question:**
+Which method removes AND returns the last element of a list?
 
-**Opções:**
+**Options:**
 - A. `list.remove()`
 - B. `list.pop()`
 - C. `list.del()`
 - D. `list.discard()`
 
-**✅ Resposta Correta: B**
+**✅ Correct Answer: B**
 
-**📚 Explicação:**
-Métodos de listas:
-- **`pop()`**: Remove e **retorna** o último elemento (ou o índice especificado)
-- **`remove(valor)`**: Remove a primeira ocorrência do valor (não retorna)
-- **`del`**: Palavra-chave (não método) para deletar por índice
-- **`discard()`**: Método de `set`, não de lista
+**📚 Explanation:**
+List methods:
+- **`pop()`**: Removes and **returns** the last element (or the element at a specified index)
+- **`remove(value)`**: Removes the first occurrence of the value (does not return it)
+- **`del`**: Keyword (not a method) for deleting by index
+- **`discard()`**: Method of `set`, not of list
 
-Exemplo:
+Example:
 ```python
-lista = [1, 2, 3]
-ultimo = lista.pop()  # ultimo = 3, lista = [1, 2]
+my_list = [1, 2, 3]
+last = my_list.pop()  # last = 3, my_list = [1, 2]
 ```
 
-**Conceito:** Métodos de manipulação de listas.
+**Concept:** List manipulation methods.
 
 ---
 
-### **Questão 14**
+### **Question 14**
 
-**Pergunta:**
+**Code:**
 ```python
 text = "hello"
 print(text.upper().count("L"))
 ```
 
-**Opções:**
+**Options:**
 - A. `0`
 - B. `1`
 - C. `2`
-- D. `Erro`
+- D. `Error`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-Execução em cadeia (method chaining):
+**📚 Explanation:**
+Method chaining execution:
 1. `text.upper()` → `"HELLO"`
-2. `"HELLO".count("L")` → conta quantos `"L"` existem
-3. Há 2 letras `L` em `"HELLO"`
+2. `"HELLO".count("L")` → counts how many `"L"` exist
+3. There are 2 letters `L` in `"HELLO"`
 
-**Importante:** O método `count()` é **case-sensitive** (diferencia maiúsculas de minúsculas).
+**Important:** The `count()` method is **case-sensitive**.
 
-**Conceito:** Métodos de strings - upper(), count() e method chaining.
+**Concept:** String methods — upper(), count() and method chaining.
 
 ---
 
-### **Questão 15**
+### **Question 15**
 
-**Pergunta:**
+**Code:**
 ```python
 a = [1, 2, 3]
 b = a
@@ -422,91 +422,91 @@ b.append(4)
 print(a)
 ```
 
-**Opções:**
+**Options:**
 - A. `[1, 2, 3]`
 - B. `[4, 1, 2, 3]`
 - C. `[1, 2, 3, 4]`
-- D. `Erro`
+- D. `Error`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-Quando fazemos `b = a`, **não criamos uma cópia** da lista. Criamos uma nova **referência** para a mesma lista na memória.
+**📚 Explanation:**
+When we do `b = a`, we do **not create a copy** of the list. We create a new **reference** to the same list in memory.
 
-- `a` e `b` apontam para o **mesmo objeto** na memória
-- Modificar `b` afeta `a` (porque são a mesma lista)
+- `a` and `b` point to the **same object** in memory
+- Modifying `b` affects `a` (because they are the same list)
 
-Para criar uma cópia independente:
+To create an independent copy:
 ```python
-b = a.copy()  # ou b = a[:] ou b = list(a)
+b = a.copy()  # or b = a[:] or b = list(a)
 ```
 
-**Conceito:** Referências vs cópias - mutabilidade de listas.
+**Concept:** References vs copies — list mutability.
 
 ---
 
-### **Questão 16**
+### **Question 16**
 
-**Pergunta:**
+**Code:**
 ```python
 for i in range(2, 10, 3):
     print(i, end=" ")
 ```
 
-**Opções:**
+**Options:**
 - A. `2 4 6 8`
 - B. `3 6 9`
 - C. `2 5 8 11`
 - D. `2 5 8`
 
-**✅ Resposta Correta: D**
+**✅ Correct Answer: D**
 
-**📚 Explicação:**
-A função `range(início, fim, passo)`:
-- **início**: valor inicial (inclusivo) → `2`
-- **fim**: valor final (exclusivo) → `10`
-- **passo**: incremento → `3`
+**📚 Explanation:**
+The `range(start, stop, step)` function:
+- **start**: initial value (inclusive) → `2`
+- **stop**: final value (exclusive) → `10`
+- **step**: increment → `3`
 
-Sequência gerada:
-- Começa em `2`
-- Próximo: `2 + 3 = 5`
-- Próximo: `5 + 3 = 8`
-- Próximo: `8 + 3 = 11` (mas 11 ≥ 10, então para)
+Generated sequence:
+- Starts at `2`
+- Next: `2 + 3 = 5`
+- Next: `5 + 3 = 8`
+- Next: `8 + 3 = 11` (but 11 ≥ 10, so it stops)
 
-**Conceito:** Função range() com início, fim e passo.
+**Concept:** range() function with start, stop, and step.
 
 ---
 
-### **Questão 17**
+### **Question 17**
 
-**Pergunta:**
+**Code:**
 ```python
 dicionario = {"a": 1, "b": 2, "c": 3}
 print("b" in dicionario)
 ```
 
-**Opções:**
+**Options:**
 - A. `True`
 - B. `False`
 - C. `2`
-- D. `Erro`
+- D. `Error`
 
-**✅ Resposta Correta: A**
+**✅ Correct Answer: A**
 
-**📚 Explicação:**
-O operador `in` verifica se uma **chave** existe no dicionário (não o valor).
+**📚 Explanation:**
+The `in` operator checks if a **key** exists in the dictionary (not the value).
 
-- `"b" in dicionario` → `True` (porque "b" é uma chave)
-- `2 in dicionario` → `False` (2 é um valor, não uma chave)
+- `"b" in dicionario` → `True` (because "b" is a key)
+- `2 in dicionario` → `False` (2 is a value, not a key)
 - `2 in dicionario.values()` → `True`
 
-**Conceito:** Operador `in` com dicionários - verifica chaves.
+**Concept:** `in` operator with dictionaries — checks keys.
 
 ---
 
-### **Questão 18**
+### **Question 18**
 
-**Pergunta:**
+**Code:**
 ```python
 def func(lst):
     lst = [10, 20, 30]
@@ -516,31 +516,31 @@ func(minha_lista)
 print(minha_lista)
 ```
 
-**Opções:**
+**Options:**
 - A. `[10, 20, 30]`
 - B. `[]`
 - C. `[1, 2, 3]`
-- D. `Erro`
+- D. `Error`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-Quando **reatribuímos** o parâmetro dentro da função (`lst = [10, 20, 30]`), criamos uma **nova variável local** que não afeta o argumento original.
+**📚 Explanation:**
+When we **reassign** the parameter inside the function (`lst = [10, 20, 30]`), we create a **new local variable** that does not affect the original argument.
 
-Se quisermos modificar a lista original, devemos usar métodos:
+To modify the original list, use methods:
 ```python
 def func(lst):
     lst.clear()
     lst.extend([10, 20, 30])
 ```
 
-**Conceito:** Passagem por referência vs reatribuição - escopo de variáveis.
+**Concept:** Pass by reference vs reassignment — variable scope.
 
 ---
 
-### **Questão 19**
+### **Question 19**
 
-**Pergunta:**
+**Code:**
 ```python
 try:
     print(1 / 0)
@@ -552,30 +552,30 @@ finally:
     print("fim")
 ```
 
-**Opções:**
+**Options:**
 - A. `erro ok fim`
 - B. `ok fim`
 - C. `erro fim`
-- D. `Apenas erro`
+- D. `Only erro`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-Estrutura try-except-else-finally:
-- **`try`**: bloco de código a ser testado
-- **`except`**: executado se houver exceção → imprime `"erro"`
-- **`else`**: executado se **NÃO** houver exceção (não executa neste caso)
-- **`finally`**: **sempre** executado, independente de exceção → imprime `"fim"`
+**📚 Explanation:**
+try-except-else-finally structure:
+- **`try`**: code block to be tested
+- **`except`**: executed if an exception occurs → prints `"erro"`
+- **`else`**: executed if **NO** exception occurs (does not execute here)
+- **`finally`**: **always** executed, regardless of exceptions → prints `"fim"`
 
-Como houve exceção, o `else` não executa.
+Since an exception occurred, the `else` block does not execute.
 
-**Conceito:** Tratamento de exceções - blocos try/except/else/finally.
+**Concept:** Exception handling — try/except/else/finally blocks.
 
 ---
 
-### **Questão 20**
+### **Question 20**
 
-**Pergunta:**
+**Code:**
 ```python
 x = "abc"
 y = x * 2
@@ -583,49 +583,49 @@ z = x + "2"
 print(y, z)
 ```
 
-**Opções:**
+**Options:**
 - A. `abc2 abcabc`
 - B. `6 abc2`
-- C. `Erro`
+- C. `Error`
 - D. `abcabc abc2`
 
-**✅ Resposta Correta: D**
+**✅ Correct Answer: D**
 
-**📚 Explicação:**
-Operações com strings:
-- **Multiplicação** (`*`): Repete a string
+**📚 Explanation:**
+String operations:
+- **Multiplication** (`*`): Repeats the string
   - `"abc" * 2` → `"abcabc"`
-- **Concatenação** (`+`): Junta strings
+- **Concatenation** (`+`): Joins strings
   - `"abc" + "2"` → `"abc2"`
 
-**Importante:** Não se pode multiplicar string por string ou somar string com número.
+**Important:** You cannot multiply string by string or add string with number.
 
-**Conceito:** Operações com strings - repetição e concatenação.
+**Concept:** String operations — repetition and concatenation.
 
 ---
 
-## 📊 Resumo dos Conceitos Abordados
+## 📊 Concepts Summary
 
-| Conceito | Questões |
-|----------|----------|
+| Concept | Questions |
+|---------|-----------|
 | Tuple unpacking / Swap | 1 |
-| Operadores aritméticos | 2, 3, 12 |
-| Tipos de dados | 4 |
+| Arithmetic operators | 2, 3, 12 |
+| Data types | 4 |
 | Slicing | 5, 16 |
-| Nomenclatura de variáveis | 6 |
-| Indexação negativa | 7 |
-| Valores truthy/falsy | 8 |
-| Controle de fluxo (continue) | 9 |
-| Parâmetros padrão | 10 |
-| Métodos de listas | 11, 13 |
-| Métodos de strings | 14, 20 |
-| Referências vs cópias | 15, 18 |
+| Variable naming | 6 |
+| Negative indexing | 7 |
+| Truthy/falsy values | 8 |
+| Control flow (continue) | 9 |
+| Default parameters | 10 |
+| List methods | 11, 13 |
+| String methods | 14, 20 |
+| References vs copies | 15, 18 |
 | Range() | 16 |
-| Operador in | 17 |
-| Tratamento de exceções | 19 |
+| in operator | 17 |
+| Exception handling | 19 |
 
 ---
 
-**🎯 Critério de Aprovação:** Mínimo de 14 acertos (70%)
+**🎯 Passing Score:** Minimum 14 correct answers (70%)
 
-**📚 Dica de Estudo:** Revise os conceitos das questões que você errou e pratique com códigos similares!
+**📚 Study Tip:** Review the concepts from questions you got wrong and practice with similar code!

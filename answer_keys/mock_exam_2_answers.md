@@ -1,8 +1,8 @@
-# PCEP Mock Exam 5 — Answer Key & Explanations
+# 📝 DETAILED ANSWER KEY - PCEP MOCK EXAM 2 (Realistic)
 
 **Difficulty:** Realistic (calibrated to actual PCEP-30-02 exam level)
 
-## Quick Answer Key
+## ✅ Quick Answer Key
 
 | Q# | Answer | Block | Concept |
 |----|--------|-------|---------|
@@ -45,7 +45,7 @@
 
 ---
 
-## Detailed Explanations
+## 📚 Detailed Explanations
 
 ### Q1 — Operator Precedence
 
@@ -53,7 +53,7 @@
 print(2 ** 3 + 5 % 3 - 1)
 ```
 
-**Correct Answer: C** — `9`
+**✅ Correct Answer: C** — `9`
 
 **Step-by-step:**
 1. `**` first: 2³ = 8
@@ -71,7 +71,7 @@ x = 15
 print(x // 4, x % 4)
 ```
 
-**Correct Answer: D** — `3 3`
+**✅ Correct Answer: D** — `3 3`
 
 **Step-by-step:**
 - 15 // 4 = 3 (rounds down to nearest integer)
@@ -88,7 +88,7 @@ x = "ab" + "cd" * 2
 print(x)
 ```
 
-**Correct Answer: B** — `abcdcd`
+**✅ Correct Answer: B** — `abcdcd`
 
 **Step-by-step:**
 1. `*` has higher precedence: "cd" * 2 = "cdcd"
@@ -105,7 +105,7 @@ x = int(3.7) + int("5")
 print(x)
 ```
 
-**Correct Answer: A** — `8`
+**✅ Correct Answer: A** — `8`
 
 **Step-by-step:**
 - `int(3.7)` = 3 (truncates toward zero, does NOT round)
@@ -124,7 +124,7 @@ y = 10
 print(x > 3 and y < 8)
 ```
 
-**Correct Answer: B** — `False`
+**✅ Correct Answer: B** — `False`
 
 **Step-by-step:**
 - x > 3 → 5 > 3 → True
@@ -143,7 +143,7 @@ y = 3
 print(x | y)
 ```
 
-**Correct Answer: A** — `7`
+**✅ Correct Answer: A** — `7`
 
 **Step-by-step:**
 - 5 in binary: 101
@@ -166,7 +166,7 @@ else:
     print("low")
 ```
 
-**Correct Answer: A** — `mid`
+**✅ Correct Answer: A** — `mid`
 
 **Step-by-step:**
 - 7 > 10? No
@@ -185,7 +185,7 @@ while x < 4:
 print(x)
 ```
 
-**Correct Answer: C** — `4`
+**✅ Correct Answer: C** — `4`
 
 **Step-by-step:**
 - x: 0→1→2→3→4
@@ -205,7 +205,7 @@ for i in range(1, 5):
 print(total)
 ```
 
-**Correct Answer: D** — `10`
+**✅ Correct Answer: D** — `10`
 
 **Step-by-step:**
 - range(1, 5) produces: 1, 2, 3, 4
@@ -224,7 +224,7 @@ for i in range(1, 6):
     print(i, end=" ")
 ```
 
-**Correct Answer: B** — `1 2`
+**✅ Correct Answer: B** — `1 2`
 
 **Step-by-step:**
 - i=1: 1%3=1 ≠ 0 → print 1
@@ -245,7 +245,7 @@ for i in range(3):
 print(count)
 ```
 
-**Correct Answer: A** — `6`
+**✅ Correct Answer: A** — `6`
 
 **Explanation:** Outer: 3 iterations × Inner: 2 iterations = 6 total increments.
 
@@ -260,7 +260,7 @@ nums = [10, 20, 30, 40, 50]
 print(nums[1] + nums[-1])
 ```
 
-**Correct Answer: C** — `70`
+**✅ Correct Answer: C** — `70`
 
 **Step-by-step:**
 - nums[1] = 20 (index 1, second element)
@@ -278,7 +278,7 @@ data = [1, 2, 3, 4, 5, 6]
 print(data[2:5])
 ```
 
-**Correct Answer: D** — `[3, 4, 5]`
+**✅ Correct Answer: D** — `[3, 4, 5]`
 
 **Step-by-step:**
 - Indices 2, 3, 4 (5 is exclusive)
@@ -296,7 +296,7 @@ my_list.insert(2, 99)
 print(my_list)
 ```
 
-**Correct Answer: A** — `[3, 1, 99, 4, 1, 5]`
+**✅ Correct Answer: A** — `[3, 1, 99, 4, 1, 5]`
 
 **Explanation:** insert(index, value) places the value AT that index, shifting everything else right.
 
@@ -311,7 +311,7 @@ data = {"Peter": 30, "Paul": 31}
 print(list(data.keys()))
 ```
 
-**Correct Answer: B** — `['Peter', 'Paul']`
+**✅ Correct Answer: B** — `['Peter', 'Paul']`
 
 **Explanation:** `keys()` returns a view of dictionary keys. `list()` converts it to a list.
 
@@ -327,7 +327,7 @@ t2 = t1 + (4, 5)
 print(len(t2))
 ```
 
-**Correct Answer: C** — `5`
+**✅ Correct Answer: C** — `5`
 
 **Explanation:** Tuples support `+` for concatenation. (1,2,3) + (4,5) = (1,2,3,4,5). Length = 5.
 
@@ -343,7 +343,7 @@ parts = s.split(",")
 print(len(parts))
 ```
 
-**Correct Answer: D** — `2`
+**✅ Correct Answer: D** — `2`
 
 **Explanation:** Splitting "Hello, World!" at "," produces ['Hello', ' World!'] — 2 elements.
 
@@ -361,7 +361,7 @@ result = add(3, 4)
 print(result * 2)
 ```
 
-**Correct Answer: B** — `14`
+**✅ Correct Answer: B** — `14`
 
 **Step-by-step:**
 - add(3, 4) returns 7
@@ -383,7 +383,7 @@ modify()
 print(x)
 ```
 
-**Correct Answer: D** — `5`
+**✅ Correct Answer: D** — `5`
 
 **Explanation:** `x = 10` inside the function creates a LOCAL variable. The global `x` is unchanged. The function's return value is not captured.
 
@@ -401,8 +401,39 @@ except ValueError:
 print(value)
 ```
 
-**Correct Answer: C** — `-1`
+**✅ Correct Answer: C** — `-1`
 
 **Explanation:** `int("hello")` raises ValueError. The except block catches it and assigns -1 to value.
 
 **Key Takeaway:** `except ExceptionType:` catches only that specific exception type. Code continues normally after the except block.
+
+---
+
+## 📊 Concepts Summary
+
+| Concept | Questions |
+|---------|-----------|
+| Operator precedence | 1, 3 |
+| Floor division and modulo | 2 |
+| Type casting | 4 |
+| Boolean operators | 5 |
+| Bitwise operators | 6 |
+| if/elif/else conditional | 7 |
+| while loop | 8 |
+| for loop with range() | 9, 11 |
+| break statement | 10 |
+| List indexing | 12 |
+| Slicing | 13 |
+| List methods | 14 |
+| Dictionary methods | 15 |
+| Tuples | 16 |
+| String methods | 17 |
+| Functions and return | 18 |
+| Variable scope | 19 |
+| Exception handling | 20 |
+
+---
+
+**🎯 Passing Score:** Minimum 14 correct answers (70%)
+
+**📚 Study Tip:** This mock exam reflects the actual PCEP exam level. Practice until you consistently score 16+!

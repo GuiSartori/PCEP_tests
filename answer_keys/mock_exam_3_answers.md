@@ -1,81 +1,81 @@
-# 📝 CORREÇÃO DETALHADA - SIMULADO PCEP 3 (Revisão Geral)
+# 📝 DETAILED ANSWER KEY - PCEP MOCK EXAM 3 (Balanced Review)
 
-## ✅ Gabarito e Explicações
+## ✅ Answer Key & Explanations
 
 ---
 
-### **Questão 1**
+### **Question 1**
 
-**Pergunta:**
+**Code:**
 ```python
 x = "Python"
 print(x[-3:])
 ```
 
-**Opções:**
+**Options:**
 - A. `Pyt`
 - B. `tho`
 - C. `on`
 - D. `hon`
 
-**✅ Resposta Correta: D**
+**✅ Correct Answer: D**
 
-**📚 Explicação:**
-Slicing com índice negativo:
-- `x[-3:]` → do 3º elemento de trás para frente até o fim
+**📚 Explanation:**
+Slicing with negative index:
+- `x[-3:]` → from the 3rd element from the end to the end
 
 String `"Python"`:
-- Índice -6: `P`
-- Índice -5: `y`
-- Índice -4: `t`
-- Índice -3: `h` ← começa aqui
-- Índice -2: `o`
-- Índice -1: `n`
+- Index -6: `P`
+- Index -5: `y`
+- Index -4: `t`
+- Index -3: `h` ← starts here
+- Index -2: `o`
+- Index -1: `n`
 
-Resultado: `"hon"`
+Result: `"hon"`
 
-**Conceito:** Slicing com índices negativos.
+**Concept:** Slicing with negative indices.
 
 ---
 
-### **Questão 2**
+### **Question 2**
 
-**Pergunta:**
+**Code:**
 ```python
 print(isinstance(True, int))
 ```
 
-**Opções:**
+**Options:**
 - A. `False`
 - B. `TypeError`
 - C. `True`
 - D. `None`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-Em Python, `bool` é uma **subclasse** de `int`!
+**📚 Explanation:**
+In Python, `bool` is a **subclass** of `int`!
 
-Implicações:
+Implications:
 - `True` == `1` → `True`
 - `False` == `0` → `True`
 - `True + True` → `2`
 - `False * 10` → `0`
 
-Hierarquia de tipos:
+Type hierarchy:
 ```
 object
   └─ int
       └─ bool
 ```
 
-**Conceito:** bool é subclasse de int - hierarquia de tipos.
+**Concept:** bool is a subclass of int — type hierarchy.
 
 ---
 
-### **Questão 3**
+### **Question 3**
 
-**Pergunta:**
+**Code:**
 ```python
 a = [1, 2, 3, 4, 5]
 b = a[1:4]
@@ -83,34 +83,34 @@ b[0] = 99
 print(a[1])
 ```
 
-**Opções:**
+**Options:**
 - A. `99`
 - B. `2`
 - C. `1`
-- D. `Erro`
+- D. `Error`
 
-**✅ Resposta Correta: B**
+**✅ Correct Answer: B**
 
-**📚 Explicação:**
-**Slicing cria uma nova lista** (cópia dos elementos).
+**📚 Explanation:**
+**Slicing creates a new list** (a copy of elements).
 
-Execução:
-1. `b = a[1:4]` → `b = [2, 3, 4]` (nova lista)
+Execution:
+1. `b = a[1:4]` → `b = [2, 3, 4]` (new list)
 2. `b[0] = 99` → `b = [99, 3, 4]`
-3. `a` permanece inalterado: `[1, 2, 3, 4, 5]`
+3. `a` remains unchanged: `[1, 2, 3, 4, 5]`
 4. `a[1]` = `2`
 
-**Diferença:**
-- `b = a[1:4]` → cópia (independente)
-- `b = a` → referência (compartilhado)
+**Difference:**
+- `b = a[1:4]` → copy (independent)
+- `b = a` → reference (shared)
 
-**Conceito:** Slicing cria cópias, não referências.
+**Concept:** Slicing creates copies, not references.
 
 ---
 
-### **Questão 4**
+### **Question 4**
 
-**Pergunta:**
+**Code:**
 ```python
 d = {}
 d[1] = "a"
@@ -119,35 +119,35 @@ d[1.0] = "c"
 print(len(d))
 ```
 
-**Opções:**
+**Options:**
 - A. `1`
 - B. `2`
 - C. `3`
-- D. `Erro`
+- D. `Error`
 
-**✅ Resposta Correta: B**
+**✅ Correct Answer: B**
 
-**📚 Explicação:**
-Em Python, `1` e `1.0` são considerados **iguais**:
+**📚 Explanation:**
+In Python, `1` and `1.0` are considered **equal**:
 - `1 == 1.0` → `True`
 - `hash(1) == hash(1.0)` → `True`
 
-Portanto, são a **mesma chave** no dicionário!
+Therefore, they are the **same key** in the dictionary!
 
-Execução:
+Execution:
 1. `d[1] = "a"` → `{1: "a"}`
-2. `d["1"] = "b"` → `{1: "a", "1": "b"}` (chave diferente!)
-3. `d[1.0] = "c"` → `{1: "c", "1": "b"}` (sobrescreve 1)
+2. `d["1"] = "b"` → `{1: "a", "1": "b"}` (different key!)
+3. `d[1.0] = "c"` → `{1: "c", "1": "b"}` (overwrites key 1)
 
-Resultado: 2 chaves → `len(d) = 2`
+Result: 2 keys → `len(d) = 2`
 
-**Conceito:** Equivalência entre int e float em dicionários.
+**Concept:** Equivalence between int and float as dictionary keys.
 
 ---
 
-### **Questão 5**
+### **Question 5**
 
-**Pergunta:**
+**Code:**
 ```python
 def f(a, b, c=3, d=4):
     return a + b + c + d
@@ -155,30 +155,30 @@ def f(a, b, c=3, d=4):
 print(f(1, 2, d=10))
 ```
 
-**Opções:**
+**Options:**
 - A. `16`
 - B. `20`
 - C. `10`
-- D. `Erro`
+- D. `Error`
 
-**✅ Resposta Correta: A**
+**✅ Correct Answer: A**
 
-**📚 Explicação:**
-Chamada com **argumentos posicionais e nomeados**:
-- `a = 1` (posicional)
-- `b = 2` (posicional)
-- `c = 3` (valor padrão, não fornecido)
-- `d = 10` (nomeado, sobrescreve o padrão)
+**📚 Explanation:**
+Call with **positional and keyword arguments**:
+- `a = 1` (positional)
+- `b = 2` (positional)
+- `c = 3` (default value, not provided)
+- `d = 10` (keyword, overrides default)
 
-Soma: `1 + 2 + 3 + 10 = 16`
+Sum: `1 + 2 + 3 + 10 = 16`
 
-**Conceito:** Argumentos posicionais, nomeados e valores padrão.
+**Concept:** Positional arguments, keyword arguments, and default values.
 
 ---
 
-### **Questão 6**
+### **Question 6**
 
-**Pergunta:**
+**Code:**
 ```python
 for i in range(5):
     if i == 3:
@@ -188,80 +188,80 @@ else:
 print(i)
 ```
 
-**Opções:**
+**Options:**
 - A. `else\n3`
 - B. `else\n4`
 - C. `4`
 - D. `3`
 
-**✅ Resposta Correta: D**
+**✅ Correct Answer: D**
 
-**📚 Explicação:**
-O bloco `else` de um loop **só executa se o loop completar normalmente** (sem `break`).
+**📚 Explanation:**
+The `else` block of a loop **only executes if the loop completes normally** (without `break`).
 
-Execução:
-1. `i=0`, `i=1`, `i=2` → loop continua
-2. `i=3` → `break` → sai do loop
-3. `else` NÃO executa (loop foi interrompido)
-4. `print(i)` → imprime `3`
+Execution:
+1. `i=0`, `i=1`, `i=2` → loop continues
+2. `i=3` → `break` → exits loop
+3. `else` does NOT execute (loop was interrupted)
+4. `print(i)` → prints `3`
 
-**Importante:** A variável do loop (`i`) persiste após o loop!
+**Important:** The loop variable (`i`) persists after the loop!
 
-**Conceito:** Cláusula else em loops - break impede execução.
+**Concept:** else clause in loops — break prevents execution.
 
 ---
 
-### **Questão 7**
+### **Question 7**
 
-**Pergunta:**
+**Code:**
 ```python
 s = "hello world"
 print(s.split())
 ```
 
-**Opções:**
+**Options:**
 - A. `['h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd']`
 - B. `['hello', 'world']`
 - C. `['hello world']`
 - D. `('hello', 'world')`
 
-**✅ Resposta Correta: B**
+**✅ Correct Answer: B**
 
-**📚 Explicação:**
-`split()` sem argumentos:
-- Separa por **qualquer whitespace** (espaços, tabs, newlines)
-- Remove whitespace extra automaticamente
-- Retorna uma **lista**
+**📚 Explanation:**
+`split()` without arguments:
+- Splits on **any whitespace** (spaces, tabs, newlines)
+- Removes extra whitespace automatically
+- Returns a **list**
 
-Exemplos:
+Examples:
 - `"hello world".split()` → `['hello', 'world']`
 - `"a  b   c".split()` → `['a', 'b', 'c']`
 - `"hello world".split(' ')` → `['hello', 'world']`
 
-**Conceito:** Método split() - separação por whitespace.
+**Concept:** split() method — splitting by whitespace.
 
 ---
 
-### **Questão 8**
+### **Question 8**
 
-**Pergunta:**
+**Code:**
 ```python
 x = lambda a, b: a if a > b else b
 print(x(5, 8))
 ```
 
-**Opções:**
+**Options:**
 - A. `5`
 - B. `True`
-- C. `Erro`
+- C. `Error`
 - D. `8`
 
-**✅ Resposta Correta: D**
+**✅ Correct Answer: D**
 
-**📚 Explicação:**
-**Lambda** é uma função anônima de uma linha.
+**📚 Explanation:**
+**Lambda** is a one-line anonymous function.
 
-Equivalente a:
+Equivalent to:
 ```python
 def x(a, b):
     if a > b:
@@ -270,52 +270,52 @@ def x(a, b):
         return b
 ```
 
-Execução:
-- `x(5, 8)` → `5 > 8` é `False`
-- Retorna `b` → `8`
+Execution:
+- `x(5, 8)` → `5 > 8` is `False`
+- Returns `b` → `8`
 
-**Uso:** Funções simples em `map()`, `filter()`, `sorted()`, etc.
+**Usage:** Simple functions in `map()`, `filter()`, `sorted()`, etc.
 
-**Conceito:** Funções lambda e expressão condicional ternária.
+**Concept:** Lambda functions and ternary conditional expression.
 
 ---
 
-### **Questão 9**
+### **Question 9**
 
-**Pergunta:**
+**Code:**
 ```python
 nums = [1, 2, 3, 4, 5]
 print(nums[::2])
 ```
 
-**Opções:**
+**Options:**
 - A. `[1, 3, 5]`
 - B. `[2, 4]`
 - C. `[1, 2]`
 - D. `[5, 3, 1]`
 
-**✅ Resposta Correta: A**
+**✅ Correct Answer: A**
 
-**📚 Explicação:**
-Slicing com passo: `[início:fim:passo]`
-- `[::2]` → do início ao fim, de 2 em 2
+**📚 Explanation:**
+Slicing with step: `[start:stop:step]`
+- `[::2]` → from start to end, every 2nd element
 
-Execução:
-- Índice 0: `1` ✓
-- Índice 1: `2` (pula)
-- Índice 2: `3` ✓
-- Índice 3: `4` (pula)
-- Índice 4: `5` ✓
+Execution:
+- Index 0: `1` ✓
+- Index 1: `2` (skipped)
+- Index 2: `3` ✓
+- Index 3: `4` (skipped)
+- Index 4: `5` ✓
 
-Resultado: `[1, 3, 5]`
+Result: `[1, 3, 5]`
 
-**Conceito:** Slicing com step (passo).
+**Concept:** Slicing with step.
 
 ---
 
-### **Questão 10**
+### **Question 10**
 
-**Pergunta:**
+**Code:**
 ```python
 x = 5
 def f():
@@ -325,63 +325,63 @@ f()
 print(x)
 ```
 
-**Opções:**
+**Options:**
 - A. `5`
-- B. `Erro`
+- B. `Error`
 - C. `10`
 - D. `None`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-A palavra-chave `global` permite **modificar variáveis globais** dentro de funções.
+**📚 Explanation:**
+The `global` keyword allows **modifying global variables** inside functions.
 
-Sem `global`:
+Without `global`:
 ```python
 def f():
-    x = 10  # Cria variável LOCAL, não afeta a global
+    x = 10  # Creates a LOCAL variable, doesn't affect the global
 ```
 
-Com `global`:
+With `global`:
 ```python
 def f():
-    global x  # Modifica a variável GLOBAL
+    global x  # Modifies the GLOBAL variable
     x = 10
 ```
 
-**Conceito:** Palavra-chave global - modificação de variáveis globais.
+**Concept:** global keyword — modifying global variables.
 
 ---
 
-### **Questão 11**
+### **Question 11**
 
-**Pergunta:**
+**Code:**
 ```python
 print("abc" * 0)
 ```
 
-**Opções:**
+**Options:**
 - A. `abc`
 - B. `0`
-- C. `Erro`
-- D. `''` (string vazia)
+- C. `Error`
+- D. `''` (empty string)
 
-**✅ Resposta Correta: D**
+**✅ Correct Answer: D**
 
-**📚 Explicação:**
-Multiplicar string por número inteiro:
+**📚 Explanation:**
+Multiplying string by integer:
 - `"abc" * 3` → `"abcabcabc"`
 - `"abc" * 1` → `"abc"`
-- `"abc" * 0` → `""` (string vazia)
-- `"abc" * -1` → `""` (também vazia)
+- `"abc" * 0` → `""` (empty string)
+- `"abc" * -1` → `""` (also empty)
 
-**Conceito:** Repetição de strings - casos especiais (0 e negativos).
+**Concept:** String repetition — special cases (0 and negatives).
 
 ---
 
-### **Questão 12**
+### **Question 12**
 
-**Pergunta:**
+**Code:**
 ```python
 lst = [3, 1, 4, 1, 5]
 lst.sort()
@@ -389,90 +389,90 @@ lst.reverse()
 print(lst[0])
 ```
 
-**Opções:**
+**Options:**
 - A. `5`
 - B. `1`
 - C. `3`
 - D. `4`
 
-**✅ Resposta Correta: A**
+**✅ Correct Answer: A**
 
-**📚 Explicação:**
-Métodos que modificam a lista **in-place**:
+**📚 Explanation:**
+Methods that modify the list **in-place**:
 
-Execução:
-1. `lst.sort()` → `[1, 1, 3, 4, 5]` (ordena crescente)
-2. `lst.reverse()` → `[5, 4, 3, 1, 1]` (inverte)
+Execution:
+1. `lst.sort()` → `[1, 1, 3, 4, 5]` (ascending order)
+2. `lst.reverse()` → `[5, 4, 3, 1, 1]` (reversed)
 3. `lst[0]` → `5`
 
-**Importante:** Ambos os métodos retornam `None`, não a lista!
+**Important:** Both methods return `None`, not the list!
 
-**Conceito:** Métodos in-place - sort() e reverse().
+**Concept:** In-place methods — sort() and reverse().
 
 ---
 
-### **Questão 13**
+### **Question 13**
 
-**Pergunta:**
+**Code:**
 ```python
 t = (1, 2, 3)
 t[0] = 10
 ```
 
-**Opções:**
-- A. `t se torna (10, 2, 3)`
-- B. `TypeError: tuplas são imutáveis`
-- C. `t se torna [10, 2, 3]`
+**Options:**
+- A. `t becomes (10, 2, 3)`
+- B. `TypeError: tuples are immutable`
+- C. `t becomes [10, 2, 3]`
 - D. `IndexError`
 
-**✅ Resposta Correta: B**
+**✅ Correct Answer: B**
 
-**📚 Explicação:**
-Tuplas são **imutáveis** - não é possível modificar seus elementos.
+**📚 Explanation:**
+Tuples are **immutable** — you cannot modify their elements.
 
-Operações permitidas:
-- ✅ `t[0]` (acessar)
-- ✅ `t + (4,)` (criar nova tupla)
-- ✅ `t * 2` (criar nova tupla)
-- ❌ `t[0] = 10` (modificar) → **TypeError**
+Allowed operations:
+- ✅ `t[0]` (access)
+- ✅ `t + (4,)` (create new tuple)
+- ✅ `t * 2` (create new tuple)
+- ❌ `t[0] = 10` (modify) → **TypeError**
 
-**Exceção:** Se a tupla contém objetos mutáveis (como listas), esses objetos internos podem ser modificados.
+**Exception:** If the tuple contains mutable objects (like lists), those internal objects can be modified.
 
-**Conceito:** Imutabilidade de tuplas.
+**Concept:** Tuple immutability.
 
 ---
 
-### **Questão 14**
+### **Question 14**
 
-**Pergunta:**
+**Code:**
 ```python
 d = {"x": 1, "y": 2, "z": 3}
 print(list(d.values()))
 ```
 
-**Opções:**
+**Options:**
 - A. `['x', 'y', 'z']`
 - B. `[('x',1), ('y',2), ('z',3)]`
 - C. `[1, 2, 3]`
-- D. `Erro`
+- D. `Error`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-Métodos de dicionários:
-- **`keys()`**: retorna as chaves → `dict_keys(['x', 'y', 'z'])`
-- **`values()`**: retorna os valores → `dict_values([1, 2, 3])`
-- **`items()`**: retorna pares (chave, valor) → `dict_items([('x', 1), ...])`
+**📚 Explanation:**
+Dictionary methods:
+- **`keys()`**: returns the keys → `dict_keys(['x', 'y', 'z'])`
+- **`values()`**: returns the values → `dict_values([1, 2, 3])`
+- **`items()`**: returns (key, value) pairs → `dict_items([('x', 1), ...])`
 
-`list(d.values())` converte para lista → `[1, 2, 3]`
+`list(d.values())` converts to list → `[1, 2, 3]`
 
-**Conceito:** Métodos de dicionários - keys(), values(), items().
+**Concept:** Dictionary methods — keys(), values(), items().
 
 ---
 
-### **Questão 15**
+### **Question 15**
 
-**Pergunta:**
+**Code:**
 ```python
 try:
     result = 10 / 2
@@ -484,31 +484,31 @@ finally:
     print("fim")
 ```
 
-**Opções:**
+**Options:**
 - A. `erro fim`
 - B. `fim`
 - C. `ok fim`
 - D. `ok`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-Estrutura completa de tratamento de exceções:
+**📚 Explanation:**
+Complete exception handling structure:
 
-- **`try`**: código a ser testado
-- **`except`**: executado SE houver exceção
-- **`else`**: executado SE NÃO houver exceção → imprime `"ok"`
-- **`finally`**: **SEMPRE** executado → imprime `"fim"`
+- **`try`**: code to be tested
+- **`except`**: executed IF an exception occurs
+- **`else`**: executed IF NO exception occurs → prints `"ok"`
+- **`finally`**: **ALWAYS** executed → prints `"fim"`
 
-Como `10 / 2` não gera exceção, o `else` é executado.
+Since `10 / 2` does not raise an exception, the `else` block executes.
 
-**Conceito:** Blocos try/except/else/finally - fluxo completo.
+**Concept:** try/except/else/finally blocks — complete flow.
 
 ---
 
-### **Questão 16**
+### **Question 16**
 
-**Pergunta:**
+**Code:**
 ```python
 x = [1, 2, 3]
 y = [4, 5, 6]
@@ -516,66 +516,66 @@ z = x + y
 print(z[-1], len(z))
 ```
 
-**Opções:**
+**Options:**
 - A. `3 6`
 - B. `6 3`
 - C. `6 6`
-- D. `Erro`
+- D. `Error`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-Operador `+` com listas realiza **concatenação**:
+**📚 Explanation:**
+The `+` operator with lists performs **concatenation**:
 
-Execução:
+Execution:
 1. `z = x + y` → `[1, 2, 3, 4, 5, 6]`
-2. `z[-1]` → último elemento → `6`
-3. `len(z)` → comprimento → `6`
+2. `z[-1]` → last element → `6`
+3. `len(z)` → length → `6`
 
-Saída: `6 6`
+Output: `6 6`
 
-**Conceito:** Concatenação de listas com operador +.
+**Concept:** List concatenation with + operator.
 
 ---
 
-### **Questão 17**
+### **Question 17**
 
-**Pergunta:**
+**Code:**
 ```python
 x = "abcdef"
 print(x[1::2])
 ```
 
-**Opções:**
+**Options:**
 - A. `ace`
 - B. `abcdef`
 - C. `bce`
 - D. `bdf`
 
-**✅ Resposta Correta: D**
+**✅ Correct Answer: D**
 
-**📚 Explicação:**
-Slicing `[início::passo]`:
-- Começa no índice 1 (`b`)
-- Vai até o fim
-- Passo 2 (pega de 2 em 2)
+**📚 Explanation:**
+Slicing `[start::step]`:
+- Starts at index 1 (`b`)
+- Goes to the end
+- Step 2 (takes every 2nd)
 
 String `"abcdef"`:
-- Índice 1: `b` ✓
-- Índice 2: `c` (pula)
-- Índice 3: `d` ✓
-- Índice 4: `e` (pula)
-- Índice 5: `f` ✓
+- Index 1: `b` ✓
+- Index 2: `c` (skipped)
+- Index 3: `d` ✓
+- Index 4: `e` (skipped)
+- Index 5: `f` ✓
 
-Resultado: `"bdf"`
+Result: `"bdf"`
 
-**Conceito:** Slicing com início e passo.
+**Concept:** Slicing with start and step.
 
 ---
 
-### **Questão 18**
+### **Question 18**
 
-**Pergunta:**
+**Code:**
 ```python
 def f(n):
     if n <= 1:
@@ -585,18 +585,18 @@ def f(n):
 print(f(6))
 ```
 
-**Opções:**
+**Options:**
 - A. `5`
 - B. `8`
 - C. `13`
 - D. `21`
 
-**✅ Resposta Correta: B**
+**✅ Correct Answer: B**
 
-**📚 Explicação:**
-Esta é a **sequência de Fibonacci** implementada recursivamente.
+**📚 Explanation:**
+This is the **Fibonacci sequence** implemented recursively.
 
-Sequência:
+Sequence:
 - f(0) = 0
 - f(1) = 1
 - f(2) = f(1) + f(0) = 1 + 0 = 1
@@ -605,13 +605,13 @@ Sequência:
 - f(5) = f(4) + f(3) = 3 + 2 = 5
 - f(6) = f(5) + f(4) = 5 + 3 = **8**
 
-**Conceito:** Recursão - Fibonacci.
+**Concept:** Recursion — Fibonacci.
 
 ---
 
-### **Questão 19**
+### **Question 19**
 
-**Pergunta:**
+**Code:**
 ```python
 a = {"a": 1, "b": 2}
 b = {"b": 3, "c": 4}
@@ -619,131 +619,131 @@ a.update(b)
 print(a)
 ```
 
-**Opções:**
+**Options:**
 - A. `{'a': 1, 'b': 2, 'c': 4}`
 - B. `{'b': 3, 'c': 4}`
 - C. `{'a': 1, 'b': 3, 'c': 4}`
-- D. `Erro`
+- D. `Error`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-O método `update()` **mescla** dicionários:
-- Adiciona novas chaves
-- **Sobrescreve** chaves existentes
+**📚 Explanation:**
+The `update()` method **merges** dictionaries:
+- Adds new keys
+- **Overwrites** existing keys
 
-Execução:
+Execution:
 1. `a = {"a": 1, "b": 2}`
 2. `a.update({"b": 3, "c": 4})`
-   - Adiciona `"c": 4`
-   - Sobrescreve `"b": 2` → `"b": 3`
-3. Resultado: `{"a": 1, "b": 3, "c": 4}`
+   - Adds `"c": 4`
+   - Overwrites `"b": 2` → `"b": 3`
+3. Result: `{"a": 1, "b": 3, "c": 4}`
 
-**Conceito:** Método update() de dicionários - mesclagem.
+**Concept:** dict.update() method — merging dictionaries.
 
 ---
 
-### **Questão 20**
+### **Question 20**
 
-**Pergunta:**
+**Code:**
 ```python
 items = ["a", "b", "c"]
 result = list(enumerate(items, start=1))
 print(result[1])
 ```
 
-**Opções:**
+**Options:**
 - A. `(2, 'b')`
 - B. `(1, 'a')`
 - C. `(0, 'b')`
 - D. `(1, 'b')`
 
-**✅ Resposta Correta: A**
+**✅ Correct Answer: A**
 
-**📚 Explicação:**
-`enumerate(iterável, start=n)` retorna tuplas (índice, valor):
+**📚 Explanation:**
+`enumerate(iterable, start=n)` returns tuples (index, value):
 
-Execução:
+Execution:
 1. `enumerate(items, start=1)`:
    - `(1, 'a')`
    - `(2, 'b')`
    - `(3, 'c')`
 2. `list(...)` → `[(1, 'a'), (2, 'b'), (3, 'c')]`
-3. `result[1]` → segundo elemento → `(2, 'b')`
+3. `result[1]` → second element → `(2, 'b')`
 
-**Uso comum:** Loop com contador personalizado:
+**Common usage:** Loop with custom counter:
 ```python
 for i, item in enumerate(items, start=1):
     print(f"{i}. {item}")
 ```
 
-**Conceito:** Função enumerate() com start personalizado.
+**Concept:** enumerate() function with custom start.
 
 ---
 
-## 📊 Resumo dos Conceitos Abordados
+## 📊 Concepts Summary
 
-| Conceito | Questões |
-|----------|----------|
-| Slicing (básico e avançado) | 1, 3, 9, 17 |
-| Hierarquia de tipos | 2 |
-| Equivalência em dicionários | 4 |
-| Argumentos de funções | 5 |
-| Cláusula else em loops | 6 |
-| Métodos de strings | 7 |
-| Funções lambda | 8 |
-| Escopo (global) | 10 |
-| Operações com strings | 11 |
-| Métodos in-place | 12 |
-| Imutabilidade | 13 |
-| Métodos de dicionários | 14, 19 |
-| Tratamento de exceções | 15 |
-| Concatenação de listas | 16 |
-| Recursão | 18 |
+| Concept | Questions |
+|---------|-----------|
+| Slicing (basic and advanced) | 1, 3, 9, 17 |
+| Type hierarchy | 2 |
+| Dictionary key equivalence | 4 |
+| Function arguments | 5 |
+| else clause in loops | 6 |
+| String methods | 7 |
+| Lambda functions | 8 |
+| Scope (global) | 10 |
+| String operations | 11 |
+| In-place methods | 12 |
+| Immutability | 13 |
+| Dictionary methods | 14, 19 |
+| Exception handling | 15 |
+| List concatenation | 16 |
+| Recursion | 18 |
 | Enumerate | 20 |
 
 ---
 
-## 🎯 Distribuição de Dificuldade
+## 🎯 Difficulty Distribution
 
-- **Básico** (8 questões): 1, 7, 9, 11, 12, 13, 14, 16
-- **Intermediário** (8 questões): 3, 5, 6, 10, 15, 17, 19, 20
-- **Avançado** (4 questões): 2, 4, 8, 18
-
----
-
-**🎯 Critério de Aprovação:** Mínimo de 14 acertos (70%)
-
-**📚 Dica de Estudo:** Este simulado oferece uma revisão equilibrada. Pratique os conceitos que você tem mais dificuldade!
+- **Basic** (8 questions): 1, 7, 9, 11, 12, 13, 14, 16
+- **Intermediate** (8 questions): 3, 5, 6, 10, 15, 17, 19, 20
+- **Advanced** (4 questions): 2, 4, 8, 18
 
 ---
 
-## 📖 Recursos Adicionais
+**🎯 Passing Score:** Minimum 14 correct answers (70%)
 
-### Comandos úteis para praticar:
+**📚 Study Tip:** This mock exam offers a balanced review. Focus on the concepts you find most challenging!
+
+---
+
+## 📖 Additional Resources
+
+### Useful commands to practice:
 ```python
 # Slicing
 s = "Python"
-print(s[::-1])    # Inverter
-print(s[::2])     # Pular elementos
+print(s[::-1])    # Reverse
+print(s[::2])     # Skip elements
 
-# Dicionários
+# Dictionaries
 d = {"a": 1}
 d.update({"b": 2})
 print(d.get("c", 0))
 
-# Listas
+# Lists
 lst = [1, 2, 3]
 lst.sort()
 lst.reverse()
 
-# Tratamento de exceções
+# Exception handling
 try:
-    # código
+    # code
 except Exception as e:
-    # tratamento
+    # handle
 else:
-    # sem exceção
+    # no exception
 finally:
-    # sempre executa
+    # always executes
 ```

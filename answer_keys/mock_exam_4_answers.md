@@ -1,12 +1,12 @@
-# 📝 CORREÇÃO DETALHADA - SIMULADO PCEP 2 (Intermediário/Difícil)
+# 📝 DETAILED ANSWER KEY - PCEP MOCK EXAM 4 (Intermediate/Hard)
 
-## ✅ Gabarito e Explicações
+## ✅ Answer Key & Explanations
 
 ---
 
-### **Questão 1**
+### **Question 1**
 
-**Pergunta:**
+**Code:**
 ```python
 x = 1
 y = 2
@@ -16,92 +16,92 @@ y = z
 print(x, y, z)
 ```
 
-**Opções:**
+**Options:**
 - A. `1 2 1`
 - B. `2 1 2`
 - C. `1 1 2`
 - D. `2 1 1`
 
-**✅ Resposta Correta: D**
+**✅ Correct Answer: D**
 
-**📚 Explicação:**
-Este é um **swap manual** usando variável temporária, executado passo a passo:
+**📚 Explanation:**
+This is a **manual swap** using a temporary variable, executed step by step:
 
-Estado inicial:
+Initial state:
 - `x = 1`, `y = 2`
 
-Passo a passo:
-1. `z = x` → `z = 1` (salva o valor de x)
-2. `x = y` → `x = 2` (x agora tem o valor de y)
-3. `y = z` → `y = 1` (y agora tem o valor original de x)
+Step-by-step:
+1. `z = x` → `z = 1` (saves x's value)
+2. `x = y` → `x = 2` (x now has y's value)
+3. `y = z` → `y = 1` (y now has x's original value)
 
-Resultado final: `x=2, y=1, z=1` → imprime `2 1 1`
+Final result: `x=2, y=1, z=1` → prints `2 1 1`
 
-**Conceito:** Swap de variáveis usando variável temporária.
+**Concept:** Variable swap using a temporary variable.
 
 ---
 
-### **Questão 2**
+### **Question 2**
 
-**Pergunta:**
+**Code:**
 ```python
 print(2 ** 3 + 5 // 2 - 1 * 3)
 ```
 
-**Opções:**
+**Options:**
 - A. `7`
 - B. `8`
 - C. `9`
 - D. `10`
 
-**✅ Resposta Correta: A**
+**✅ Correct Answer: A**
 
-**📚 Explicação:**
-**Ordem de precedência** dos operadores (do maior para o menor):
-1. `**` (exponenciação)
-2. `*`, `/`, `//`, `%` (multiplicação, divisão)
-3. `+`, `-` (adição, subtração)
+**📚 Explanation:**
+**Operator precedence** (highest to lowest):
+1. `**` (exponentiation)
+2. `*`, `/`, `//`, `%` (multiplication, division)
+3. `+`, `-` (addition, subtraction)
 
-Cálculo passo a passo:
+Step-by-step calculation:
 1. `2 ** 3` = `8`
 2. `5 // 2` = `2`
 3. `1 * 3` = `3`
 4. `8 + 2 - 3` = `7`
 
-**Conceito:** Precedência de operadores aritméticos.
+**Concept:** Arithmetic operator precedence.
 
 ---
 
-### **Questão 3**
+### **Question 3**
 
-**Pergunta:**
+**Code:**
 ```python
 s = "abcde"
 print(s[::-1][1:4])
 ```
 
-**Opções:**
+**Options:**
 - A. `bcd`
 - B. `edc`
 - C. `dcb`
 - D. `cba`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-Operações encadeadas:
-1. `s[::-1]` → inverte a string → `"edcba"`
-2. `[1:4]` → pega do índice 1 ao 3 → `"dcb"`
+**📚 Explanation:**
+Chained operations:
+1. `s[::-1]` → reverses the string → `"edcba"`
+2. `[1:4]` → takes indices 1 to 3 → `"dcb"`
 
-Detalhe: `[::-1]` usa passo negativo `-1` para inverter a sequência.
+Detail: `[::-1]` uses negative step `-1` to reverse the sequence.
 
-**Conceito:** Slicing avançado com passo negativo e encadeamento.
+**Concept:** Advanced slicing with negative step and chaining.
 
 ---
 
-### **Questão 4**
+### **Question 4**
 
-**Pergunta:**
+**Code:**
 ```python
 x = [1, 2, 3]
 y = x[:]
@@ -109,35 +109,35 @@ y.append(4)
 print(x, y)
 ```
 
-**Opções:**
+**Options:**
 - A. `[1, 2, 3, 4] [1, 2, 3, 4]`
 - B. `[1, 2, 3] [1, 2, 3, 4]`
 - C. `[1, 2, 3, 4] [1, 2, 3]`
-- D. `Erro`
+- D. `Error`
 
-**✅ Resposta Correta: B**
+**✅ Correct Answer: B**
 
-**📚 Explicação:**
-`x[:]` cria uma **cópia superficial** (shallow copy) da lista.
+**📚 Explanation:**
+`x[:]` creates a **shallow copy** of the list.
 
-Diferença importante:
-- `y = x` → referência (mesma lista)
-- `y = x[:]` → cópia (listas independentes)
+Important difference:
+- `y = x` → reference (same list)
+- `y = x[:]` → copy (independent lists)
 
-Outras formas de copiar:
+Other ways to copy:
 ```python
 y = x.copy()
 y = list(x)
 y = x[:]
 ```
 
-**Conceito:** Shallow copy vs referência - cópia de listas.
+**Concept:** Shallow copy vs reference — list copying.
 
 ---
 
-### **Questão 5**
+### **Question 5**
 
-**Pergunta:**
+**Code:**
 ```python
 def f(x, lst=[]):
     lst.append(x)
@@ -147,24 +147,24 @@ print(f(1))
 print(f(2))
 ```
 
-**Opções:**
+**Options:**
 - A. `[1]\n[2]`
 - B. `[1, 2]\n[1, 2]`
-- C. `Erro`
+- C. `Error`
 - D. `[1]\n[1, 2]`
 
-**✅ Resposta Correta: D**
+**✅ Correct Answer: D**
 
-**📚 Explicação:**
-⚠️ **Armadilha clássica do Python!**
+**📚 Explanation:**
+⚠️ **Classic Python pitfall!**
 
-Argumentos padrão **mutáveis** são criados **uma única vez** quando a função é definida, não a cada chamada.
+Mutable **default arguments** are created **once** when the function is defined, not on each call.
 
-Execução:
-1. `f(1)` → `lst` é `[]`, adiciona 1 → retorna `[1]`
-2. `f(2)` → `lst` ainda é `[1]` (mesma lista!), adiciona 2 → retorna `[1, 2]`
+Execution:
+1. `f(1)` → `lst` is `[]`, appends 1 → returns `[1]`
+2. `f(2)` → `lst` is still `[1]` (same list!), appends 2 → returns `[1, 2]`
 
-**Solução correta:**
+**Correct solution:**
 ```python
 def f(x, lst=None):
     if lst is None:
@@ -173,169 +173,169 @@ def f(x, lst=None):
     return lst
 ```
 
-**Conceito:** Armadilha de argumentos padrão mutáveis.
+**Concept:** Mutable default argument pitfall.
 
 ---
 
-### **Questão 6**
+### **Question 6**
 
-**Pergunta:**
+**Code:**
 ```python
 a = "hello"
 b = a.replace("l", "L", 1)
 print(b)
 ```
 
-**Opções:**
+**Options:**
 - A. `heLLo`
 - B. `Hello`
 - C. `hELLO`
 - D. `heLlo`
 
-**✅ Resposta Correta: D**
+**✅ Correct Answer: D**
 
-**📚 Explicação:**
-O método `replace(old, new, count)` tem um terceiro parâmetro opcional:
-- **`count`**: número máximo de substituições
+**📚 Explanation:**
+The `replace(old, new, count)` method has an optional third parameter:
+- **`count`**: maximum number of replacements
 
 `a.replace("l", "L", 1)`:
-- Substitui apenas a **primeira** ocorrência de "l" por "L"
-- `"hello"` → `"heLlo"` (só o primeiro "l" vira "L")
+- Replaces only the **first** occurrence of "l" with "L"
+- `"hello"` → `"heLlo"` (only the first "l" becomes "L")
 
-Sem o terceiro parâmetro, substituiria todas as ocorrências: `"heLLo"`.
+Without the third parameter, it would replace all occurrences: `"heLLo"`.
 
-**Conceito:** Método replace() com limite de substituições.
+**Concept:** replace() method with replacement limit.
 
 ---
 
-### **Questão 7**
+### **Question 7**
 
-**Pergunta:**
+**Code:**
 ```python
 x = 5
 print(x == 5 and x is 5)
 ```
 
-**Opções:**
-- A. `True (mas comportamento depende da implementação)`
+**Options:**
+- A. `True (but behavior is implementation-dependent)`
 - B. `False`
-- C. `Erro de sintaxe`
+- C. `Syntax error`
 - D. `None`
 
-**✅ Resposta Correta: A**
+**✅ Correct Answer: A**
 
-**📚 Explicação:**
-Diferença entre `==` e `is`:
-- **`==`**: compara **valores** (igualdade)
-- **`is`**: compara **identidade** (mesmo objeto na memória)
+**📚 Explanation:**
+Difference between `==` and `is`:
+- **`==`**: compares **values** (equality)
+- **`is`**: compares **identity** (same object in memory)
 
-**CPython** faz cache de inteiros pequenos (-5 a 256), então `x is 5` retorna `True` para esses valores.
+**CPython** caches small integers (-5 to 256), so `x is 5` returns `True` for these values.
 
-⚠️ **Importante:** Este comportamento **não é garantido** pela especificação Python e pode variar entre implementações.
+⚠️ **Important:** This behavior **is not guaranteed** by the Python specification and may vary between implementations.
 
-**Boa prática:** Use `is` apenas para comparar com `None`, `True`, `False`.
+**Best practice:** Use `is` only to compare with `None`, `True`, `False`.
 
-**Conceito:** Diferença entre == (igualdade) e is (identidade).
+**Concept:** Difference between == (equality) and is (identity).
 
 ---
 
-### **Questão 8**
+### **Question 8**
 
-**Pergunta:**
+**Code:**
 ```python
 d = {"a": 1, "b": 2}
 d["c"] = d.get("c", 0) + 1
 print(d)
 ```
 
-**Opções:**
+**Options:**
 - A. `{'a': 1, 'b': 2, 'c': 0}`
 - B. `{'a': 1, 'b': 2, 'c': 1}`
 - C. `KeyError`
 - D. `{'a': 1, 'b': 2}`
 
-**✅ Resposta Correta: B**
+**✅ Correct Answer: B**
 
-**📚 Explicação:**
-O método `get(chave, padrão)`:
-- Retorna o valor da chave se existir
-- Retorna o valor `padrão` se a chave não existir
+**📚 Explanation:**
+The `get(key, default)` method:
+- Returns the key's value if it exists
+- Returns the `default` value if the key doesn't exist
 
-Execução:
-1. `d.get("c", 0)` → "c" não existe, retorna `0`
+Execution:
+1. `d.get("c", 0)` → "c" doesn't exist, returns `0`
 2. `0 + 1` = `1`
-3. `d["c"] = 1` → cria a chave "c" com valor `1`
+3. `d["c"] = 1` → creates key "c" with value `1`
 
-**Uso comum:** Contador de ocorrências sem verificar se a chave existe.
+**Common usage:** Occurrence counter without checking if key exists.
 
-**Conceito:** Método get() de dicionários com valor padrão.
+**Concept:** dict.get() method with default value.
 
 ---
 
-### **Questão 9**
+### **Question 9**
 
-**Pergunta:**
+**Code:**
 ```python
 x = [i ** 2 for i in range(5) if i % 2 != 0]
 print(x)
 ```
 
-**Opções:**
+**Options:**
 - A. `[0, 4, 16]`
 - B. `[1, 4, 9]`
 - C. `[1, 9]`
 - D. `[0, 1, 4, 9, 16]`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-**List comprehension** com filtro:
+**📚 Explanation:**
+**List comprehension** with filter:
 
-Estrutura: `[expressão for item in iterável if condição]`
+Structure: `[expression for item in iterable if condition]`
 
-Execução:
+Execution:
 - `range(5)` → 0, 1, 2, 3, 4
-- Filtro `if i % 2 != 0` → apenas ímpares → 1, 3
+- Filter `if i % 2 != 0` → only odd numbers → 1, 3
 - `i ** 2` → 1² = 1, 3² = 9
-- Resultado: `[1, 9]`
+- Result: `[1, 9]`
 
-**Conceito:** List comprehension com condição de filtro.
+**Concept:** List comprehension with filter condition.
 
 ---
 
-### **Questão 10**
+### **Question 10**
 
-**Pergunta:**
+**Code:**
 ```python
 t = (1, 2, [3, 4])
 t[2].append(5)
 print(t)
 ```
 
-**Opções:**
-- A. `TypeError: tupla é imutável`
+**Options:**
+- A. `TypeError: tuple is immutable`
 - B. `(1, 2, [3, 4], 5)`
 - C. `(1, 2, [3, 4, 5])`
 - D. `(1, 2, [5, 3, 4])`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-⚠️ **Conceito importante:**
-- A **tupla** é imutável (não pode mudar seus elementos)
-- Mas a **lista dentro** da tupla é mutável
+**📚 Explanation:**
+⚠️ **Important concept:**
+- The **tuple** is immutable (cannot change its elements)
+- But the **list inside** the tuple is mutable
 
-`t[2]` retorna a lista `[3, 4]`, que pode ser modificada.
+`t[2]` returns the list `[3, 4]`, which can be modified.
 
-Analogia: A tupla é uma "caixa lacrada" que contém objetos. Você não pode trocar o que está na caixa, mas pode modificar o conteúdo de objetos mutáveis dentro dela.
+Analogy: The tuple is a "sealed box" containing objects. You can't swap what's in the box, but you can modify the contents of mutable objects inside it.
 
-**Conceito:** Imutabilidade de tuplas vs mutabilidade de elementos internos.
+**Concept:** Tuple immutability vs mutability of internal elements.
 
 ---
 
-### **Questão 11**
+### **Question 11**
 
-**Pergunta:**
+**Code:**
 ```python
 def outer():
     x = 10
@@ -348,67 +348,67 @@ def outer():
 print(outer())
 ```
 
-**Opções:**
+**Options:**
 - A. `10`
 - B. `5`
 - C. `UnboundLocalError`
 - D. `15`
 
-**✅ Resposta Correta: D**
+**✅ Correct Answer: D**
 
-**📚 Explicação:**
-A palavra-chave `nonlocal` permite modificar variáveis do **escopo externo** (mas não global).
+**📚 Explanation:**
+The `nonlocal` keyword allows modifying variables from the **enclosing scope** (but not global).
 
-Sem `nonlocal`:
+Without `nonlocal`:
 ```python
 def inner():
     x += 5  # UnboundLocalError!
 ```
 
-Com `nonlocal`:
+With `nonlocal`:
 ```python
 def inner():
-    nonlocal x  # Modifica a variável do escopo outer
-    x += 5  # Funciona! x passa de 10 para 15
+    nonlocal x  # Modifies the variable from outer's scope
+    x += 5  # Works! x goes from 10 to 15
 ```
 
-**Conceito:** nonlocal - modificação de variáveis em escopos externos.
+**Concept:** nonlocal — modifying variables in enclosing scopes.
 
 ---
 
-### **Questão 12**
+### **Question 12**
 
-**Pergunta:**
+**Code:**
 ```python
 print(list(zip([1, 2, 3], "ab")))
 ```
 
-**Opções:**
+**Options:**
 - A. `[(1, 'a'), (2, 'b')]`
 - B. `[(1, 'a'), (2, 'b'), (3, None)]`
 - C. `[(1, 'a'), (2, 'b'), (3, '')]`
-- D. `Erro`
+- D. `Error`
 
-**✅ Resposta Correta: A**
+**✅ Correct Answer: A**
 
-**📚 Explicação:**
-A função `zip()` combina elementos de múltiplos iteráveis, mas **para no menor**.
+**📚 Explanation:**
+The `zip()` function combines elements from multiple iterables, but **stops at the shortest**.
 
-Execução:
-- Lista: `[1, 2, 3]` (3 elementos)
-- String: `"ab"` (2 elementos)
-- `zip()` para quando a string acaba
-- Resultado: `[(1, 'a'), (2, 'b')]`
+Execution:
+- List: `[1, 2, 3]` (3 elements)
+- String: `"ab"` (2 elements)
+- `zip()` stops when the string runs out
+- Result: `[(1, 'a'), (2, 'b')]`
 
-**Uso:** Iterar sobre múltiplas sequências simultaneamente.
+**Usage:** Iterate over multiple sequences simultaneously.
 
-**Conceito:** Função zip() - combinação de iteráveis.
+**Concept:** zip() function — combining iterables.
 
 ---
 
-### **Questão 13**
+### **Question 13**
 
-**Pergunta:**
+**Code:**
 ```python
 x = 10
 def func():
@@ -417,90 +417,90 @@ x = 20
 func()
 ```
 
-**Opções:**
+**Options:**
 - A. `10`
-- B. `Erro`
+- B. `Error`
 - C. `20`
 - D. `None`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-Python usa **late binding** (ligação tardia): a variável é resolvida no momento da **execução**, não da definição.
+**📚 Explanation:**
+Python uses **late binding**: the variable is resolved at **execution** time, not at definition time.
 
-Sequência:
-1. `x = 10` (define x)
-2. `def func()` (define função, mas não executa)
-3. `x = 20` (modifica x)
-4. `func()` (executa → busca x **agora** → encontra 20)
+Sequence:
+1. `x = 10` (defines x)
+2. `def func()` (defines function, doesn't execute)
+3. `x = 20` (modifies x)
+4. `func()` (executes → looks up x **now** → finds 20)
 
-**Conceito:** Late binding - resolução de variáveis no momento da execução.
+**Concept:** Late binding — variable resolution at execution time.
 
 ---
 
-### **Questão 14**
+### **Question 14**
 
-**Pergunta:**
+**Code:**
 ```python
 nums = [4, 2, 7, 1, 9]
 result = sorted(nums, reverse=True)[:3]
 print(result)
 ```
 
-**Opções:**
+**Options:**
 - A. `[1, 2, 4]`
 - B. `[4, 2, 7]`
 - C. `[9, 7, 4, 2, 1]`
 - D. `[9, 7, 4]`
 
-**✅ Resposta Correta: D**
+**✅ Correct Answer: D**
 
-**📚 Explicação:**
-Operações encadeadas:
-1. `sorted(nums, reverse=True)` → ordena decrescente → `[9, 7, 4, 2, 1]`
-2. `[:3]` → pega os 3 primeiros → `[9, 7, 4]`
+**📚 Explanation:**
+Chained operations:
+1. `sorted(nums, reverse=True)` → sorts descending → `[9, 7, 4, 2, 1]`
+2. `[:3]` → takes first 3 → `[9, 7, 4]`
 
-**Diferença importante:**
-- `sorted()` → retorna nova lista ordenada
-- `list.sort()` → ordena in-place, retorna None
+**Important difference:**
+- `sorted()` → returns a new sorted list
+- `list.sort()` → sorts in-place, returns None
 
-**Conceito:** Função sorted() com reverse e slicing.
+**Concept:** sorted() function with reverse and slicing.
 
 ---
 
-### **Questão 15**
+### **Question 15**
 
-**Pergunta:**
+**Code:**
 ```python
 a = {1, 2, 3}
 b = {2, 3, 4}
 print(a & b, a - b)
 ```
 
-**Opções:**
+**Options:**
 - A. `{2, 3} {1}`
 - B. `{1, 4} {2, 3}`
 - C. `{2, 3} {4}`
-- D. `Erro`
+- D. `Error`
 
-**✅ Resposta Correta: A**
+**✅ Correct Answer: A**
 
-**📚 Explicação:**
-Operações com **sets** (conjuntos):
-- **`&`** (interseção): elementos em ambos → `{2, 3}`
-- **`-`** (diferença): elementos em `a` mas não em `b` → `{1}`
+**📚 Explanation:**
+**Set** operations:
+- **`&`** (intersection): elements in both → `{2, 3}`
+- **`-`** (difference): elements in `a` but not in `b` → `{1}`
 
-Outras operações:
-- `|` (união): todos elementos → `{1, 2, 3, 4}`
-- `^` (diferença simétrica): elementos em apenas um → `{1, 4}`
+Other operations:
+- `|` (union): all elements → `{1, 2, 3, 4}`
+- `^` (symmetric difference): elements in only one → `{1, 4}`
 
-**Conceito:** Operações de conjuntos (sets).
+**Concept:** Set operations.
 
 ---
 
-### **Questão 16**
+### **Question 16**
 
-**Pergunta:**
+**Code:**
 ```python
 class A:
     count = 0
@@ -513,35 +513,35 @@ c = A()
 print(A.count, a.count)
 ```
 
-**Opções:**
+**Options:**
 - A. `3 1`
 - B. `1 1`
 - C. `3 3`
 - D. `3 0`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-`count` é um **atributo de classe** (compartilhado entre todas as instâncias).
+**📚 Explanation:**
+`count` is a **class attribute** (shared between all instances).
 
-Execução:
-1. `a = A()` → `A.count` vira 1
-2. `b = A()` → `A.count` vira 2
-3. `c = A()` → `A.count` vira 3
+Execution:
+1. `a = A()` → `A.count` becomes 1
+2. `b = A()` → `A.count` becomes 2
+3. `c = A()` → `A.count` becomes 3
 4. `A.count` = 3
-5. `a.count` acessa o atributo via instância → também retorna 3
+5. `a.count` accesses the attribute via instance → also returns 3
 
-**Diferença:**
-- Atributo de **classe**: compartilhado
-- Atributo de **instância**: individual (`self.count`)
+**Difference:**
+- **Class** attribute: shared
+- **Instance** attribute: individual (`self.count`)
 
-**Conceito:** Atributos de classe vs atributos de instância.
+**Concept:** Class attributes vs instance attributes.
 
 ---
 
-### **Questão 17**
+### **Question 17**
 
-**Pergunta:**
+**Code:**
 ```python
 try:
     x = int("abc")
@@ -557,100 +557,100 @@ finally:
 print(x)
 ```
 
-**Opções:**
+**Options:**
 - A. `100`
 - B. `99`
 - C. `98`
 - D. `-1`
 
-**✅ Resposta Correta: B**
+**✅ Correct Answer: B**
 
-**📚 Explicação:**
-Fluxo de execução:
+**📚 Explanation:**
+Execution flow:
 1. `int("abc")` → **ValueError**
-2. `except ValueError` captura → `x = -1`
-3. `else` NÃO executa (houve exceção)
-4. `finally` SEMPRE executa → `x = -1 + 100 = 99`
+2. `except ValueError` catches it → `x = -1`
+3. `else` does NOT execute (exception occurred)
+4. `finally` ALWAYS executes → `x = -1 + 100 = 99`
 
-**Conceito:** Múltiplos except com else e finally.
+**Concept:** Multiple except with else and finally.
 
 ---
 
-### **Questão 18**
+### **Question 18**
 
-**Pergunta:**
+**Code:**
 ```python
 m = [[0]*3 for _ in range(3)]
 m[0][1] = 5
 print(m[1][1])
 ```
 
-**Opções:**
+**Options:**
 - A. `5`
 - B. `None`
 - C. `0`
-- D. `Erro`
+- D. `Error`
 
-**✅ Resposta Correta: C**
+**✅ Correct Answer: C**
 
-**📚 Explicação:**
-List comprehension cria **listas independentes**:
+**📚 Explanation:**
+List comprehension creates **independent lists**:
 
-`[[0]*3 for _ in range(3)]` cria:
+`[[0]*3 for _ in range(3)]` creates:
 ```python
 [
-    [0, 0, 0],  # Lista independente
-    [0, 0, 0],  # Lista independente
-    [0, 0, 0]   # Lista independente
+    [0, 0, 0],  # Independent list
+    [0, 0, 0],  # Independent list
+    [0, 0, 0]   # Independent list
 ]
 ```
 
-Modificar `m[0][1]` não afeta `m[1][1]`.
+Modifying `m[0][1]` does not affect `m[1][1]`.
 
-**Conceito:** List comprehension para matriz - listas independentes.
+**Concept:** List comprehension for matrices — independent lists.
 
 ---
 
-### **Questão 19**
+### **Question 19**
 
-**Pergunta:**
+**Code:**
 ```python
 m = [[0]*3] * 3
 m[0][1] = 5
 print(m[1][1])
 ```
 
-**Opções:**
+**Options:**
 - A. `0`
 - B. `5`
 - C. `None`
-- D. `Erro`
+- D. `Error`
 
-**✅ Resposta Correta: B**
+**✅ Correct Answer: B**
 
-**📚 Explicação:**
-⚠️ **Armadilha!** Multiplicar lista cria **referências** para a mesma lista:
+**📚 Explanation:**
+⚠️ **Pitfall!** Multiplying a list creates **references** to the same list:
 
-`[[0]*3] * 3` cria:
+`[[0]*3] * 3` creates:
 ```python
 [
     [0, 0, 0],  # ┐
-    [0, 0, 0],  # ├─ MESMA lista na memória!
+    [0, 0, 0],  # ├─ SAME list in memory!
     [0, 0, 0]   # ┘
 ]
 ```
 
-Modificar `m[0][1]` modifica **todas** as "linhas" porque são a mesma lista.
+Modifying `m[0][1]` modifies **all** "rows" because they are the same list.
 
-**Solução correta:** Usar list comprehension (questão 18).
+**Correct solution:** Use list comprehension (question 18).
 
-**Conceito:** Armadilha de multiplicação de listas - referências compartilhadas.
+**Concept:** List multiplication pitfall — shared references.
 
 ---
 
-### **Questão 20**
+### **Question 20**
 
-**Pergunta:**
+**Code:**
 ```python
 gen = (x for x in range(5))
 next(gen)
@@ -658,54 +658,54 @@ next(gen)
 print(list(gen))
 ```
 
-**Opções:**
+**Options:**
 - A. `[0, 1, 2, 3, 4]`
 - B. `[3, 4]`
-- C. `Erro`
+- C. `Error`
 - D. `[2, 3, 4]`
 
-**✅ Resposta Correta: D**
+**✅ Correct Answer: D**
 
-**📚 Explicação:**
-**Generator** (gerador) usa parênteses `()` e é **lazy** (avalia sob demanda).
+**📚 Explanation:**
+A **generator** uses parentheses `()` and is **lazy** (evaluates on demand).
 
-Execução:
-1. `next(gen)` → consome e retorna 0
-2. `next(gen)` → consome e retorna 1
-3. `list(gen)` → consome o restante → `[2, 3, 4]`
+Execution:
+1. `next(gen)` → consumes and returns 0
+2. `next(gen)` → consumes and returns 1
+3. `list(gen)` → consumes the rest → `[2, 3, 4]`
 
-**Diferença:**
-- `[x for x in range(5)]` → lista completa (memória)
-- `(x for x in range(5))` → generator (lazy, econômico)
+**Difference:**
+- `[x for x in range(5)]` → full list (memory)
+- `(x for x in range(5))` → generator (lazy, memory-efficient)
 
-**Conceito:** Generators - avaliação lazy e iteração.
+**Concept:** Generators — lazy evaluation and iteration.
 
 ---
 
-## 📊 Resumo dos Conceitos Abordados
+## 📊 Concepts Summary
 
-| Conceito | Questões |
-|----------|----------|
-| Swap e atribuições | 1 |
-| Precedência de operadores | 2 |
-| Slicing avançado | 3, 14 |
-| Cópias vs referências | 4, 15, 18, 19 |
-| Argumentos padrão mutáveis | 5 |
-| Métodos de strings | 6 |
-| Identidade vs igualdade | 7 |
-| Métodos de dicionários | 8 |
+| Concept | Questions |
+|---------|-----------|
+| Swap and assignments | 1 |
+| Operator precedence | 2 |
+| Advanced slicing | 3, 14 |
+| Copies vs references | 4, 15, 18, 19 |
+| Mutable default arguments | 5 |
+| String methods | 6 |
+| Identity vs equality | 7 |
+| Dictionary methods | 8 |
 | List comprehension | 9 |
-| Mutabilidade e tuplas | 10 |
-| Escopo (nonlocal) | 11 |
-| Função zip() | 12 |
+| Mutability and tuples | 10 |
+| Scope (nonlocal) | 11 |
+| zip() function | 12 |
 | Late binding | 13 |
-| Operações com sets | 15 |
-| Atributos de classe | 16 |
-| Tratamento de exceções | 17 |
+| Set operations | 15 |
+| Class attributes | 16 |
+| Exception handling | 17 |
 | Generators | 20 |
 
 ---
 
-**🎯 Critério de Aprovação:** Mínimo de 14 acertos (70%)
+**🎯 Passing Score:** Minimum 14 correct answers (70%)
 
-**📚 Dica de Estudo:** Este simulado aborda conceitos intermediários/avançados. Pratique especialmente as armadilhas comuns (questões 5, 10, 19)!
+**📚 Study Tip:** This mock exam covers intermediate/advanced concepts. Focus especially on common pitfalls (questions 5, 10, 19)!
