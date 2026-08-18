@@ -40,7 +40,7 @@ questoes = [
 
     print("A", "B", "C", sep="-", end="!")
     print("D")""",
-        "opcoes": ["A-B-C!D", "A B C!D", "A-B-C!\nD", "A-B-C! D"],
+        "opcoes": ["A-B-C!D", "A B C!D", "A-B-C! D", "A-B-C!\\nD"],
         "resposta": "A",
         "explicacao": "sep='-' joins with dashes, end='!' replaces the newline. Next print starts right after '!', outputting 'D' on the same line."
     },
@@ -73,7 +73,7 @@ questoes = [
     x = 5
     print(2 < x < 8)
     print(1 < x > 3)""",
-        "opcoes": ["True\nTrue", "True\nFalse", "False\nTrue", "Error"],
+        "opcoes": ["True then True", "True then False", "False then True", "Error"],
         "resposta": "A",
         "explicacao": "Python supports chained comparisons. 2 < 5 < 8 → True. 1 < 5 > 3 means (1<5) and (5>3) → True."
     },
@@ -157,21 +157,21 @@ questoes = [
     else:
         print("done")
     print(n)""",
-        "opcoes": ["done\n4", "done\n3", "4", "3"],
+        "opcoes": ["done followed by 4", "done followed by 3", "4", "3"],
         "resposta": "C",
         "explicacao": "The loop breaks at n=4, so else does NOT execute (else runs only on normal completion). print(n) outputs 4."
     },
     {
         # Q13 — nested for building pattern → answer: A
-        "pergunta": """What is the output?
+        "pergunta": """What pattern does this code print?
 
     for i in range(3):
         for j in range(i + 1):
             print("*", end="")
         print()""",
-        "opcoes": ["*\n**\n***", "***\n**\n*", "*\n*\n*", "**\n**\n**"],
+        "opcoes": ["* then ** then ***", "*** then ** then *", "* then * then *", "** then ** then **"],
         "resposta": "A",
-        "explicacao": "i=0: 1 star. i=1: 2 stars. i=2: 3 stars. Builds a growing triangle."
+        "explicacao": "i=0: 1 star. i=1: 2 stars. i=2: 3 stars. Builds a growing triangle: *, **, ***."
     },
     {
         # Q14 — range() with all 3 args + break → answer: D
@@ -308,7 +308,7 @@ questoes = [
 
     result = greet("Eve")
     print(result)""",
-        "opcoes": ["Hi, Eve\nNone", "Hi, Eve\nHi, Eve", "None", "Hi, Eve"],
+        "opcoes": ["Hi, Eve then None", "Hi, Eve then Hi, Eve", "None", "Hi, Eve"],
         "resposta": "A",
         "explicacao": "greet() prints 'Hi, Eve' but has no return statement, so it returns None. print(result) outputs None."
     },
@@ -349,13 +349,15 @@ questoes = [
 
     try:
         x = int("hello")
-    except (ValueError, TypeError) as e:
+    except ValueError:
         print("caught")
+    except TypeError:
+        print("type error")
     except Exception:
         print("general")""",
-        "opcoes": ["caught", "general", "hello", "Error"],
+        "opcoes": ["caught", "general", "type error", "Error"],
         "resposta": "A",
-        "explicacao": "int('hello') raises ValueError. The first except clause catches ValueError, so 'caught' is printed."
+        "explicacao": "int('hello') raises ValueError. The first except clause catches it specifically, so 'caught' is printed."
     },
     {
         # Q28 — try/finally without except → answer: D
@@ -369,7 +371,7 @@ questoes = [
 
     result = divide(10, 2)
     print(result)""",
-        "opcoes": ["5.0\ncleanup", "cleanup", "Error: finally without except", "cleanup\n5.0"],
+        "opcoes": ["5.0 then cleanup", "cleanup only", "Error: finally without except", "cleanup then 5.0"],
         "resposta": "D",
         "explicacao": "finally always executes, even when return is used. 'cleanup' prints before the value is returned. Then print(result) outputs 5.0."
     },

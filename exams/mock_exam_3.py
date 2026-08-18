@@ -70,7 +70,7 @@ questoes = [
     else:
         print("else")
     print(i)""",
-        "opcoes": ['else\\n3', 'else\\n4', '4', '3'],
+        "opcoes": ['else then 3', 'else then 4', '4', '3'],
         "resposta": "D",
         "explicacao": 'break stops the loop AND prevents the else from executing. Then prints i=3.'
     },

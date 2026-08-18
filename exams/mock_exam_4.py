@@ -60,7 +60,7 @@ questoes = [
 
     print(f(1))
     print(f(2))""",
-        "opcoes": ['[1]\\n[2]', '[1, 2]\\n[1, 2]', 'Error', '[1]\\n[1, 2]'],
+        "opcoes": ['[1] then [2]', '[1, 2] then [1, 2]', 'Error', '[1] then [1, 2]'],
         "resposta": "D",
         "explicacao": 'Mutable default argument is shared between calls. The same list persists.'
     },
